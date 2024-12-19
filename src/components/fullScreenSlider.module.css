@@ -1,0 +1,85 @@
+.slider {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.navButton {
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+  border: none;
+  border-radius: 50%;
+  font-family: 'Montserrat', sans-serif;
+  padding: 10px;
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 10;
+}
+
+.navButton:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+.navButton:nth-child(1) {
+  left: 10px;
+}
+
+.navButton:nth-child(3) {
+  right: 10px;
+}
+
+.slideContent {
+  display: flex;
+  align-items: center; /* مرکز عمودی محتوا */
+  justify-content: center; /* مرکز افقی محتوا */
+  width: 100%;
+  height: 100%; /* پر کردن ارتفاع برای مرکز کردن */
+  box-sizing: border-box;
+}
+
+.imageContainer {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.imageContainer img {
+  display: block;
+  width: 600px;
+  height: 750px;
+  object-fit: cover;
+  border-radius: 20px;
+}
+
+.textContent {
+  flex: 1;
+  display: flex;
+  flex-direction: column; /* برای محتویات عمودی */
+  justify-content: center; /* مرکز عمودی */
+  padding: 20px;
+  text-align: left;
+  height: 100%; /* پر کردن ارتفاع کانتینر اصلی */
+  box-sizing: border-box;
+}
+
+.textContent h3 {
+  font-size: 2rem;
+  margin-bottom: 10px;
+}
+
+.textContent p {
+  font-size: 1.2rem;
+  color: #555;
+  line-height: 1.6;
+}

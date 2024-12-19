@@ -1,0 +1,49 @@
+/* styles/Footer.module.css */
+
+.footer {
+    background-color: #333;
+    color: #fff;
+    padding: 40px 20px;
+    text-align: center;
+    font-size: 1rem;
+    width: 100%; /* اطمینان از اینکه فوتر عرض کامل صفحه را بگیرد */
+    position: relative; /* این کمک می‌کند تا فوتر در صفحه قرار گیرد */
+    bottom: 0; /* فوتر در پایین صفحه قرار می‌گیرد */
+  }
+  
+  .footerContent {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-bottom: 20px;
+    flex-wrap: wrap;
+  }
+  
+  .footerLinks a {
+    color: #fff;
+    text-decoration: none;
+    margin: 0 15px;
+    transition: color 0.3s ease;
+  }
+  
+  .footerLinks a:hover {
+    color: #00aaff;
+  }
+  
+  .socialLinks a {
+    color: #fff;
+    margin: 0 10px;
+    font-size: 1.5rem;
+    transition: color 0.3s ease;
+  }
+  
+  .socialLinks a:hover {
+    color: #00aaff;
+  }
+  
+  .copyright {
+    font-size: 0.9rem;
+    color: #bbb;
+    margin-top: 20px;
+  }
+  

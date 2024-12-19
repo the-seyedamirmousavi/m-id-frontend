@@ -1,0 +1,19 @@
+:root {
+    --primary-color: #2e3644;
+    --secondary-color: #2d353f; /* رنگ ثانویه */
+    --background-color: #f0f2f5;
+    --text-color: #000000; /* رنگ متن اصلی */
+
+    --primary-color-hover: #4b5a67; /* رنگ برای hover */
+    --primary-color-active: #3f4c5b; /* رنگ برای active */
+    --primary-color-focus: #35434c; /* رنگ برای focus */
+
+    --secondary-color-hover: #4b5d66; /* رنگ برای hover در دکمه‌های ثانویه */
+    --secondary-color-active: #43535c; /* رنگ برای active در دکمه‌های ثانویه */
+    --secondary-color-focus: #3b4953; /* رنگ برای focus در دکمه‌های ثانویه */
+
+    --border-color: #d1d8e0; /* رنگ حاشیه */
+    --error-color: #e74c3c; /* رنگ خطا */
+    --success-color: #2ecc71; /* رنگ موفقیت */
+    --warning-color: #f39c12; /* رنگ هشدار */
+}

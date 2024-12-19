@@ -1,0 +1,171 @@
+.headerContainer {
+  width: 100%;
+  height: auto;
+  background-color: #f9f9f9; /* رنگ پس‌زمینه دلخواه */
+}
+
+.dropdown-menu {
+  position: relative; /* یا static */
+  margin-top: 20px; /* برای فاصله از سایر آیتم‌ها */
+}
+
+.header {
+  display: flex; /* استفاده از Flexbox */
+  justify-content: space-between; /* ایجاد فاصله بین عناصر */
+  width: 100%; /* عرض کل صفحه */
+  padding: 10px 20px; /* فاصله داخلی برای زیبایی */
+  overflow: visible; /* نمایش کامل محتوای داخلی */
+  box-sizing: border-box; /* پدینگ را داخل عرض محاسبه می‌کند */
+}
+
+/* منوی کشویی */
+.dropdown {
+  position: relative;
+}
+
+/* وقتی هدر مخفی می‌شود */
+.header.hidden {
+  transform: translateY(-100%);
+}
+
+/* بخش چپ هدر */
+.headerLeft {
+  width: auto; /* اندازه متناسب با محتوای داخلی */
+  display: flex;
+  height: auto;
+  position: relative; /* موقعیت پیش‌فرض (داخل والد کنترل می‌شود) */
+  align-items: center;
+  font-size: 18px;
+  font-weight: 600; /* ضخامت بیشتر برای فونت */
+  justify-content: flex-start; /* محتوای داخلی را به سمت چپ هدایت می‌کند */
+}
+
+/* بخش راست هدر */
+.headerRight {
+  width: auto; /* اندازه متناسب با محتوای داخلی */
+  justify-content: flex-end; /* راست‌چین کردن محتوای داخل */
+  display: flex;
+  position: static; /* موقعیت پیش‌فرض (داخل والد کنترل می‌شود) */
+  align-items: center;
+  font-size: 18px;
+  font-weight: 600; /* ضخامت بیشتر برای فونت */
+}
+
+.headerBottom {
+  width: auto; /* اندازه متناسب با محتوای داخلی */
+  justify-content: flex; /* راست‌چین کردن محتوای داخل */
+  display: flex;
+  align-items: center;
+  height: auto;
+  font-size: 18px;
+  font-weight: 600; /* ضخامت بیشتر برای فونت */
+}
+
+/* دکمه آیکن */
+.iconButton {
+  background: none;
+  border: none;
+  color: #333; /* رنگ ساده و مینیمالیستی */
+  font-size: 20px; /* اندازه کمی بزرگتر برای راحتی */
+  margin-left: 15px; /* فاصله کمتر */
+  cursor: pointer;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+  display: flex; /* استفاده از فلکس‌باکس برای مرکز کردن */
+  align-items: center; /* عمودی وسط‌چین */
+  justify-content: center; /* افقی وسط‌چین */
+}
+
+/* تغییرات هنگام هاور */
+.iconButton:hover {
+  opacity: 0.7; /* تغییر شفافیت */
+  transform: scale(1.1); /* افزایش اندازه به طور ظریف */
+}
+
+/* برای اسکرول بار */
+.header::-webkit-scrollbar {
+  height: 5px;
+}
+
+.header::-webkit-scrollbar-thumb {
+  background-color: rgba(0, 0, 0, 0.3);
+  border-radius: 10px;
+}
+
+.header::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.logo {
+  position: static; /* موقعیت پیش‌فرض (داخل والد کنترل می‌شود) */
+  width: 100px;
+}
+
+/* منوی کشویی */
+.dropdown {
+  position: relative;
+}
+
+/* وقتی هدر مخفی می‌شود */
+.header.hidden {
+  transform: translateY(-100%);
+}
+
+/* دکمه آیکن */
+.iconButton {
+  background: none;
+  border: none;
+  color: #333; /* رنگ ساده و مینیمالیستی */
+  font-size: 20px; /* اندازه کمی بزرگتر برای راحتی */
+  margin-left: 15px; /* فاصله کمتر */
+  cursor: pointer;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+  display: flex; /* استفاده از فلکس‌باکس برای مرکز کردن */
+  align-items: center; /* عمودی وسط‌چین */
+  justify-content: center; /* افقی وسط‌چین */
+}
+
+/* تغییرات هنگام هاور */
+.iconButton:hover {
+  opacity: 0.7; /* تغییر شفافیت */
+  transform: scale(1.1); /* افزایش اندازه به طور ظریف */
+}
+
+/* برای اسکرول بار */
+.header::-webkit-scrollbar {
+  height: 5px;
+}
+
+.header::-webkit-scrollbar-thumb {
+  background-color: rgba(0, 0, 0, 0.3);
+  border-radius: 10px;
+}
+
+.header::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.stylesDropdownMenuContainer {
+  display: flex;
+  flex-direction: column; /* محتوا به صورت عمودی قرار می‌گیرد */
+  align-items: flex-start; /* المان‌ها از سمت چپ مرتب می‌شوند */
+  justify-content: flex-start; /* شروع چینش از بالا */
+  height: auto; /* ارتفاع براساس محتوا */
+  width: 100%; /* عرض تمام فضای موجود */
+  padding: 10px; /* فاصله داخلی برای زیبایی */
+  background-color: #f9f9f9; /* رنگ پس‌زمینه ملایم */
+  border: 1px solid #ddd; /* یک حاشیه ساده */
+  border-radius: 5px; /* لبه‌های گرد */
+}
+
+.stylesDropdownMenuContainer .dropdown-item {
+  padding: 8px 12px; /* فاصله داخلی آیتم‌ها */
+  text-decoration: none; /* حذف خط زیر لینک‌ها */
+  color: #333; /* رنگ متن */
+  display: block; /* نمایش آیتم‌ها به صورت بلاک */
+  width: 100%; /* آیتم‌ها تمام عرض را بگیرند */
+}
+
+.stylesDropdownMenuContainer .dropdown-item:hover {
+  background-color: #e0e0e0; /* رنگ پس‌زمینه هنگام هاور */
+  color: #000; /* تغییر رنگ متن هنگام هاور */
+}
