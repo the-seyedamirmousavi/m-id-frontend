@@ -1,171 +1,158 @@
 .headerContainer {
   width: 100%;
   height: auto;
-  background-color: #f9f9f9; /* رنگ پس‌زمینه دلخواه */
+  background-color: #ffffff;
 }
 
-.dropdown-menu {
-  position: relative; /* یا static */
-  margin-top: 20px; /* برای فاصله از سایر آیتم‌ها */
+.metaHeader {
+  position: fixed; /* ثابت در بالای صفحه */
+  top: 0; /* فاصله از بالای صفحه */
+  left: 0;
+  width: 100%; /* به کل عرض صفحه گسترش پیدا می‌کند */
+  z-index: 1000; /* لایه هدر بالاتر از دیگر المان‌ها */
+  transition: transform 0.3s ease; /* انیمیشن برای مخفی یا ظاهر شدن */
 }
 
 .header {
-  display: flex; /* استفاده از Flexbox */
-  justify-content: space-between; /* ایجاد فاصله بین عناصر */
-  width: 100%; /* عرض کل صفحه */
-  padding: 10px 20px; /* فاصله داخلی برای زیبایی */
-  overflow: visible; /* نمایش کامل محتوای داخلی */
-  box-sizing: border-box; /* پدینگ را داخل عرض محاسبه می‌کند */
-}
-
-/* منوی کشویی */
-.dropdown {
-  position: relative;
-}
-
-/* وقتی هدر مخفی می‌شود */
-.header.hidden {
-  transform: translateY(-100%);
-}
-
-/* بخش چپ هدر */
-.headerLeft {
-  width: auto; /* اندازه متناسب با محتوای داخلی */
   display: flex;
-  height: auto;
-  position: relative; /* موقعیت پیش‌فرض (داخل والد کنترل می‌شود) */
-  align-items: center;
-  font-size: 18px;
-  font-weight: 600; /* ضخامت بیشتر برای فونت */
-  justify-content: flex-start; /* محتوای داخلی را به سمت چپ هدایت می‌کند */
+  justify-content: space-between;
+  width: 100%;
+  padding: 10px 20px;
+  transition: top 0.3s ease; /* انیمیشن برای پنهان شدن هدر */
+  box-sizing: border-box;
+  background-color: #ffffff;
+  position: sticky; /* نمایش هدر در بالای صفحه هنگام اسکرول */
+  top: 0;
+  z-index: 1000;
 }
 
-/* بخش راست هدر */
+.headerLeft,
 .headerRight {
-  width: auto; /* اندازه متناسب با محتوای داخلی */
-  justify-content: flex-end; /* راست‌چین کردن محتوای داخل */
   display: flex;
-  position: static; /* موقعیت پیش‌فرض (داخل والد کنترل می‌شود) */
-  align-items: center;
-  font-size: 18px;
-  font-weight: 600; /* ضخامت بیشتر برای فونت */
 }
 
-.headerBottom {
-  width: auto; /* اندازه متناسب با محتوای داخلی */
-  justify-content: flex; /* راست‌چین کردن محتوای داخل */
-  display: flex;
+.headerRight {
+  height: 50px;
   align-items: center;
-  height: auto;
-  font-size: 18px;
-  font-weight: 600; /* ضخامت بیشتر برای فونت */
 }
 
-/* دکمه آیکن */
 .iconButton {
+  text-decoration: none;
   background: none;
   border: none;
-  color: #333; /* رنگ ساده و مینیمالیستی */
-  font-size: 20px; /* اندازه کمی بزرگتر برای راحتی */
-  margin-left: 15px; /* فاصله کمتر */
+  color: var(--text-color);
+  height: "50px";
+  font-size: 16px;
+  font-weight: 600;
+  margin-left: 15px;
   cursor: pointer;
-  transition: transform 0.3s ease, opacity 0.3s ease;
-  display: flex; /* استفاده از فلکس‌باکس برای مرکز کردن */
-  align-items: center; /* عمودی وسط‌چین */
-  justify-content: center; /* افقی وسط‌چین */
 }
 
-/* تغییرات هنگام هاور */
 .iconButton:hover {
-  opacity: 0.7; /* تغییر شفافیت */
-  transform: scale(1.1); /* افزایش اندازه به طور ظریف */
-}
-
-/* برای اسکرول بار */
-.header::-webkit-scrollbar {
-  height: 5px;
-}
-
-.header::-webkit-scrollbar-thumb {
-  background-color: rgba(0, 0, 0, 0.3);
-  border-radius: 10px;
-}
-
-.header::-webkit-scrollbar-track {
-  background: transparent;
-}
-
-.logo {
-  position: static; /* موقعیت پیش‌فرض (داخل والد کنترل می‌شود) */
-  width: 100px;
+  color: var(--text-color);
 }
 
 /* منوی کشویی */
-.dropdown {
-  position: relative;
+.subMenu {
+  display: grid; /* فعال‌سازی grid layout */
+  grid-template-columns: repeat(3, 1fr); /* تعیین 3 ستون که هر کدام مساوی‌اند */
+  grid-template-rows: auto; /* ارتفاع ردیف‌ها به صورت خودکار تنظیم می‌شود */
+  gap: 10px; /* فاصله بین ردیف‌ها و ستون‌ها */
+  width: 100%;
+  padding-top: 10px;
+  transform: translateY(-10px); /* منو به صورت عمودی کمی بالاتر از حالت عادی قرار دارد */
+  transition: opacity 0.5s ease, transform 0.5s ease; /* انیمیشن برای opacity و translateY */
 }
 
-/* وقتی هدر مخفی می‌شود */
-.header.hidden {
-  transform: translateY(-100%);
+/* زمانی که موس روی دکمه کلیک می‌شود */
+.iconButton:hover + .subMenu {
+  opacity: 1; /* تغییر به حالت نمایان */
+  transform: translateY(0); /* انتقال به حالت طبیعی */
+  pointer-events: all; /* فعال شدن تعاملات کاربر */
 }
 
-/* دکمه آیکن */
-.iconButton {
-  background: none;
-  border: none;
-  color: #333; /* رنگ ساده و مینیمالیستی */
-  font-size: 20px; /* اندازه کمی بزرگتر برای راحتی */
-  margin-left: 15px; /* فاصله کمتر */
-  cursor: pointer;
-  transition: transform 0.3s ease, opacity 0.3s ease;
-  display: flex; /* استفاده از فلکس‌باکس برای مرکز کردن */
-  align-items: center; /* عمودی وسط‌چین */
-  justify-content: center; /* افقی وسط‌چین */
+/* سایر استایل‌ها مانند قبل */
+.subMenuItem {
+  padding: 5px 15px;
+  font-size: 16px;
+  color: #0f0f0f; /* رنگ پیش‌فرض متن */
+  text-decoration: none;
+  transition: all 0.3s ease; /* انیمیشن روان */
+  background-color: transparent; /* پس‌زمینه شفاف */
 }
 
-/* تغییرات هنگام هاور */
-.iconButton:hover {
-  opacity: 0.7; /* تغییر شفافیت */
-  transform: scale(1.1); /* افزایش اندازه به طور ظریف */
-}
-
-/* برای اسکرول بار */
-.header::-webkit-scrollbar {
-  height: 5px;
-}
-
-.header::-webkit-scrollbar-thumb {
-  background-color: rgba(0, 0, 0, 0.3);
-  border-radius: 10px;
-}
-
-.header::-webkit-scrollbar-track {
-  background: transparent;
-}
-
-.stylesDropdownMenuContainer {
+.menu{
+  height: 100%;
   display: flex;
-  flex-direction: column; /* محتوا به صورت عمودی قرار می‌گیرد */
-  align-items: flex-start; /* المان‌ها از سمت چپ مرتب می‌شوند */
-  justify-content: flex-start; /* شروع چینش از بالا */
-  height: auto; /* ارتفاع براساس محتوا */
-  width: 100%; /* عرض تمام فضای موجود */
-  padding: 10px; /* فاصله داخلی برای زیبایی */
-  background-color: #f9f9f9; /* رنگ پس‌زمینه ملایم */
-  border: 1px solid #ddd; /* یک حاشیه ساده */
-  border-radius: 5px; /* لبه‌های گرد */
+  height: 50px;
+  align-items: center;
 }
 
-.stylesDropdownMenuContainer .dropdown-item {
-  padding: 8px 12px; /* فاصله داخلی آیتم‌ها */
-  text-decoration: none; /* حذف خط زیر لینک‌ها */
-  color: #333; /* رنگ متن */
-  display: block; /* نمایش آیتم‌ها به صورت بلاک */
-  width: 100%; /* آیتم‌ها تمام عرض را بگیرند */
+/* Overlay with blur effect */
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.3); /* نیمه‌شفاف */
+  backdrop-filter: blur(5px); /* تار کردن صفحه زیرین */
+  -webkit-backdrop-filter: blur(8px); /* پشتیبانی از مرورگرهای Webkit */
+  z-index: 5; /* بالاتر از محتوای اصلی، پایین‌تر از هدر و منو */
 }
 
-.stylesDropdownMenuContainer .dropdown-item:hover {
-  background-color: #e0e0e0; /* رنگ پس‌زمینه هنگام هاور */
-  color: #000; /* تغییر رنگ متن هنگام هاور */
+
+/* Media Query برای موبایل */
+@media (max-width: 768px) {
+  .header {
+    flex-direction: column; /* تغییر جهت به عمودی */
+    padding: 10px;
+  }
+
+  .headerLeft {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+  }
+
+  .menuContainer {
+    display: none; /* پنهان کردن منوی اصلی */
+    flex-direction: column; /* منو به صورت عمودی */
+    background-color: #ffffff; /* رنگ پس‌زمینه منو */
+    position: absolute; /* منو به صورت شناور */
+    top: 60px; /* زیر هدر قرار گیرد */
+    left: 0;
+    width: 100%; /* عرض کامل صفحه */
+    z-index: 1000;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* سایه برای منو */
+  }
+
+  .menuContainer.active {
+    display: flex; /* نمایش منوی موبایل */
+  }
+
+  .iconButton {
+    font-size: 14px; /* کوچک‌تر کردن اندازه متن */
+    margin: 10px 0; /* فاصله بین گزینه‌های منو */
+  }
+
+  .menuToggle {
+    display: block; /* نمایش آیکون منوی همبرگری */
+    cursor: pointer;
+  }
+
+  .headerRight {
+    display: none; /* مخفی کردن بخش راست هدر در موبایل */
+  }
+
+  .subMenu {
+    grid-template-columns: 1fr; /* زیرمنو تک‌ستونی شود */
+    gap: 5px; /* کاهش فاصله بین آیتم‌ها */
+  }
+
+  .subMenuItem {
+    font-size: 14px; /* کوچک‌تر کردن فونت زیرمنو */
+    padding: 10px;
+  }
 }

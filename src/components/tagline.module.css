@@ -1,0 +1,78 @@
+.taglineSection {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  height: auto; /* Full page height to center vertically */
+  background-color: #f0f2f5; /* تغییر به رنگ پس‌زمینه ساده */
+  color: #2e3644; /* رنگ متن جدید */
+  border-radius: 1rem;
+  padding: 2rem;
+  transform: translateY(5px);
+  animation: fadeInUp 1s ease-out forwards;
+  position: relative;
+  overflow: hidden;
+}
+
+.container {
+  max-width: 900px;
+  text-align: center;
+  z-index: 1;
+}
+
+.image {
+  width: 200px; /* Adjust width of the image */
+  height: auto; /* Maintain aspect ratio */
+  margin-bottom: 1.5rem;
+  border-radius: 10%; /* If you want it circular */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Image shadow */
+}
+
+.taglineText {
+  font-size: 3rem; /* Font size for the slogan */
+  font-weight: 800;
+  line-height: 1.2;
+  margin-bottom: 1.5rem;
+  text-shadow: 0 8px 16px rgba(0, 0, 0, 0.3); /* Text shadow */
+  letter-spacing: 1px;
+  animation: fadeInText 1.5s ease-in-out forwards;
+  opacity: 0;
+}
+
+.taglineSubtext {
+  font-size: 1.5rem;
+  line-height: 1.8;
+  color: #2e3644; /* رنگ متن توضیحات */
+  text-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+  font-style: italic;
+  max-width: 800px;
+  margin: 0 auto;
+  opacity: 0;
+  animation: fadeInSubtext 2s ease-in-out forwards;
+  animation-delay: 2s;
+}
+
+/* Animation for the text */
+@keyframes fadeInText {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Animation for the subtext */
+@keyframes fadeInSubtext {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

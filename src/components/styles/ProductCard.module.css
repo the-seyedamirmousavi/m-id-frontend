@@ -1,0 +1,23 @@
+.card {
+    display: flex; /* برای قرارگیری تصویر و توضیحات در کنار هم */
+    border: 1px solid #ccc;
+    padding: 10px;
+    margin-bottom: 20px;
+    border-radius: 8px;
+    overflow: hidden; /* برای جلوگیری از بیرون‌زدن تصویر */
+  }
+  
+  .imageContainer {
+    width: 300px; /* یا هر عرض دلخواه */
+    margin-right: 20px; /* فاصله بین تصویر و توضیحات */
+    position: relative; /* برای layout="responsive" */
+  }
+  
+  .details {
+    flex: 1; /* برای پر کردن فضای باقی‌مانده */
+  }
+  
+  .price {
+      font-weight: bold;
+      margin-top: 10px;
+  }

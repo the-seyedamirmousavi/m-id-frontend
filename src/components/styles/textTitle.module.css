@@ -1,0 +1,55 @@
+.container {
+  width: 100%;
+  height: 100%;
+  background-color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center; /* عمودی وسط چین کردن */
+}
+
+.textTitle {
+  width: 80%;
+    font-size: 4rem;              /* سایز بزرگ برای متن */
+    font-weight: bold;            /* ضخیم کردن فونت برای تأثیر بیشتر */
+    text-align: center;           /* وسط‌چین کردن متن به صورت افقی */
+    line-height: 1.2;             /* تنظیم فاصله بین خطوط برای خواناتر بودن */
+    font-family: 'Arial', sans-serif;  /* انتخاب فونت ساده و خوانا */
+    color: #333;                  /* رنگ خاکی تیره برای متن */
+    margin: 0;
+    padding: 0;
+    position: relative;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1); /* اضافه کردن سایه برای جلوه بیشتر */
+  }
+  
+  .textParagraph {
+    font-size: 2rem;              /* سایز بزرگ برای متن */
+    text-align: center;           /* وسط‌چین کردن متن به صورت افقی */
+    line-height: 1.2;             /* تنظیم فاصله بین خطوط برای خواناتر بودن */
+    font-family: 'Arial', sans-serif;  /* انتخاب فونت ساده و خوانا */
+    color: #333;                  /* رنگ خاکی تیره برای متن */
+    margin: 0;
+    padding: 0;
+    position: relative;
+    top: 50%;                     /* حرکت متن به وسط صفحه از بالا */
+    transform: translateY(-50%);  /* جبران تغییرات و وسط‌چین عمودی */
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1); /* اضافه کردن سایه برای جلوه بیشتر */
+  }
+  
+  .child2 p {
+    font-size: 1.1rem;
+    font-weight: 400;
+    color: #666666;
+    line-height: 1.8;
+    text-align: justify; /* متن کاملاً تراز */
+    margin: 0;
+  }
+  
+
+  @media(max-width: 768px){
+    .container {
+        width: 100%;
+    }
+    .textTitle {
+        font-size: 2rem;              /* سایز بزرگ برای متن */
+    }
+}

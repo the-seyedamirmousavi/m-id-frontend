@@ -1,10 +1,10 @@
 .container {
   display: flex;
   width: 80%;
-  height: 100vh;
+  height: 60%;
   gap: 50px; 
   align-items: center;
-  margin: 0 auto;
+  margin: 100px auto;
 }
 
 .container.reverse {
@@ -14,9 +14,8 @@
 .child {
     position: relative;
     display: flex; /* فعال‌سازی flexbox */
+    aspect-ratio: 1 / 1; /* مربع، چون عرض = ارتفاع */
     justify-content: center; /* مرکز کردن افقی */
-    height: auto;
-    object-fit: cover; 
     align-items: center; /* مرکز کردن عمودی */
 }
 
@@ -30,7 +29,7 @@
 .img {
   width: 90%;
   object-fit: cover; /* تناسب تصویر حفظ شود */
-  aspect-ratio: 2 / 3; /* نسبت مستطیل (عرض 3 به ارتفاع 2) */
+  aspect-ratio: 1 / 1; /* مربع، چون عرض = ارتفاع */
   position: relative;
   border-radius: 20px;
   overflow: hidden;
@@ -56,7 +55,7 @@
   margin: 0;
 }
 
-@media (max-width: 1024px) {
+@media (max-width: 768px) {
   .container {
       display: flex;
       width: 90%;

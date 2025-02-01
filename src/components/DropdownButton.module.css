@@ -1,0 +1,52 @@
+.dropdownButtonContainer {
+  position: relative; /* برای تنظیم منو نسبت به دکمه */
+  display: inline-block; /* نمایش دکمه در یک خط */
+}
+
+.dropdownButton {
+  background-color: #f9f9f9; /* رنگ پس‌زمینه دکمه */
+  border: 1px solid #ddd; /* حاشیه ساده */
+  border-radius: 5px; /* گوشه‌های گرد */
+  padding: 8px 12px; /* فاصله داخلی */
+  font-size: 16px; /* اندازه فونت */
+  font-weight: 600; /* ضخامت فونت */
+  color: #333; /* رنگ متن */
+  cursor: pointer; /* تغییر نشانگر به دست */
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.dropdownButton:hover {
+  background-color: #e0e0e0; /* تغییر رنگ هنگام هاور */
+  transform: scale(1.05); /* کمی بزرگ‌تر شدن */
+}
+
+.dropdownMenu {
+  display: none; /* پنهان کردن منو به صورت پیش‌فرض */
+  position: absolute; /* موقعیت نسبی به دکمه */
+  background-color: #ffffff; /* رنگ پس‌زمینه منو */
+  border: 1px solid #ddd; /* حاشیه ساده */
+  border-radius: 5px; /* گوشه‌های گرد */
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); /* سایه برای زیبایی */
+  z-index: 1000; /* نمایش در بالاترین لایه */
+  margin-top: 8px; /* فاصله از دکمه */
+  min-width: 160px; /* حداقل عرض */
+}
+
+.dropdownMenu .dropdownItem {
+  padding: 10px 15px; /* فاصله داخلی آیتم‌ها */
+  text-decoration: none; /* حذف خط زیر لینک */
+  color: #333; /* رنگ متن */
+  display: block; /* نمایش آیتم‌ها به صورت بلوک */
+  cursor: pointer; /* تغییر نشانگر به دست */
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.dropdownMenu .dropdownItem:hover {
+  background-color: #f0f0f0; /* تغییر رنگ آیتم هنگام هاور */
+  color: #000; /* تغییر رنگ متن هنگام هاور */
+}
+
+/* نمایش منو هنگام فعال شدن */
+.dropdownButtonContainer.active .dropdownMenu {
+  display: block; /* نمایش منو */
+}

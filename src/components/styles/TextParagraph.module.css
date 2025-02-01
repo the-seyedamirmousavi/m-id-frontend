@@ -1,0 +1,25 @@
+.container{
+    width: 100%;
+    background-color: white;
+    padding: 100px 0px;
+    margin: 0px auto;
+}
+
+  .textParagraph {
+    width: 80%;
+    display: flex;
+    margin: 0px auto;
+    font-size: 1.1rem;
+    font-weight: 400;
+    color: #666666;
+    line-height: 1.8;
+  }
+
+  @media(max-width: 768px){
+    .container {
+        width: 100%;
+    }
+    .textTitle {
+        font-size: 2rem;              /* سایز بزرگ برای متن */
+    }
+}

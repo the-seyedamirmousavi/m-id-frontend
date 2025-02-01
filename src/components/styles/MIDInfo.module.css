@@ -1,0 +1,89 @@
+/* styles/MIDInfo.module.css */
+
+/* تمام صفحه */
+.fullScreenSection {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  width: 100%;
+  background-color: #f0f2f5; /* رنگ پس‌زمینه */
+  padding: 2rem;
+  box-sizing: border-box;
+  margin: 0;
+  overflow: hidden;
+  position: relative;
+}
+
+/* محتوای کامپوننت */
+.content {
+  text-align: center;
+  width: 100%;
+  max-width: 1000px;
+  z-index: 1;
+  color: #2e3644; /* رنگ متن اصلی */
+  position: relative;
+}
+
+/* تیتر اصلی */
+.title {
+  font-size: 2rem;
+  font-weight: 800;
+  margin-bottom: 1.5rem;
+  color: #2e3644; /* رنگ اصلی */
+}
+
+/* متن توضیحی */
+.text {
+  font-size: 1.2rem;
+  line-height: 1.8;
+  margin-bottom: 1.5rem;
+  color: #2d353f; /* رنگ ثانویه */
+}
+
+/* تیتر فرعی */
+.subTitle {
+  font-size: 2rem;
+  font-weight: bold;
+  margin-top: 2rem;
+  color: #2e3644; /* رنگ اصلی */
+}
+
+/* دکمه یادگیری بیشتر */
+.learnMoreButton {
+  padding: 1rem 2rem;
+  font-size: 1.2rem;
+  background-color: #2e3644; /* رنگ اصلی */
+  color: #ffffff; /* متن دکمه */
+  border: 1px solid #d1d8e0; /* رنگ حاشیه */
+  border-radius: 5px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  margin-top: 2rem;
+}
+
+.learnMoreButton:hover {
+  background-color: #4b5a67; /* رنگ hover */
+}
+
+.learnMoreButton:active {
+  background-color: #3f4c5b; /* رنگ active */
+}
+
+.learnMoreButton:focus {
+  background-color: #35434c; /* رنگ focus */
+  outline: none;
+}
+
+/* استایل‌های اضافی برای حالت خطا، موفقیت و هشدار */
+.errorMessage {
+  color: #e74c3c; /* رنگ خطا */
+}
+
+.successMessage {
+  color: #2ecc71; /* رنگ موفقیت */
+}
+
+.warningMessage {
+  color: #f39c12; /* رنگ هشدار */
+}

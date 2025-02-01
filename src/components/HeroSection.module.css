@@ -1,0 +1,88 @@
+.heroSection {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .backgroundVideo {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: 0;
+  }
+  
+  .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6); /* تیرگی پس‌زمینه */
+    z-index: 1;
+  }
+  
+  .heroContent {
+    position: relative;
+    z-index: 2;
+    text-align: center;
+    color: white;
+    max-width: 800px;
+    padding: 20px;
+  }
+  
+  .title {
+    font-size: 3rem;
+    font-family: 'Montserrat', sans-serif;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+  }
+  
+  .subtitle {
+    font-size: 1.5rem;
+    font-weight: 300;
+    line-height: 1.6;
+    margin-bottom: 40px;
+  }
+  
+  .ctaButtons {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+  }
+  
+  .primaryButton,
+  .secondaryButton {
+    padding: 15px 30px;
+    font-size: 1rem;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+    transition: all 0.3s ease;
+  }
+  
+  .primaryButton {
+    background-color: #007bff;
+    color: white;
+  }
+  
+  .primaryButton:hover {
+    background-color: #0056b3;
+  }
+  
+  .secondaryButton {
+    background-color: transparent;
+    color: white;
+    border: 2px solid white;
+  }
+  
+  .secondaryButton:hover {
+    background-color: white;
+    color: black;
+  }
+  

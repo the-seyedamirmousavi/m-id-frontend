@@ -1,4 +1,4 @@
-@import './variables.css';
+@import url('variables.css');
 
 body, html {
     height: 100%;
@@ -6,9 +6,51 @@ body, html {
     display: flex;
     overflow-x: hidden;
     justify-content: center;
+    background: #f0f2f5;
     padding: 0;
-    overflow-x: hidden;
     box-sizing: border-box;
-    background-color: var(--background-color);
-    font-family: Arial, sans-serif;
+    font-family: var(--font-primary); /* استفاده از فونت Segoe UI برای بدنه */
 }
+
+/* برای محتوای عمودی */
+.vertical {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    overflow-y: visible;
+    width: 100%;
+    font-family: var(--font-primary); /* استفاده از فونت Segoe UI برای محتوای عمودی */
+}
+
+/* برای محتوای افقی */
+.horizontal {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+    font-family: var(--font-primary); /* استفاده از فونت Segoe UI برای محتوای افقی */
+}
+
+.p {
+    width: 80%;
+    display: flex;
+    margin: 0px auto;
+    font-size: 1.1rem;
+    font-weight: 400;
+    color: #666666;
+    line-height: 1.8;
+  }
+
+  .m {
+    width: 80%;
+    display: flex;
+    margin: 0px auto;
+  }
+
+  .txt {
+    font-family: var(--font-primary);
+  }

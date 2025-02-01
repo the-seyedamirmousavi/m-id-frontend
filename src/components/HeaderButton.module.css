@@ -1,0 +1,21 @@
+.headerButton {
+    border: none; /* حذف حاشیه دکمه */
+    background: none; /* حذف رنگ پس‌زمینه */
+    color: #333; /* رنگ متن دکمه */
+    font-size: 16px; /* اندازه فونت */
+    font-weight: 500; /* ضخامت متوسط */
+    cursor: pointer; /* تغییر نشانگر به دست */
+    padding: 8px 12px; /* فاصله داخلی دکمه */
+    transition: color 0.3s ease, border-bottom 0.3s ease; /* اضافه کردن انیمیشن */
+  }
+  
+  .headerButton:hover {
+    color: #007bff; /* تغییر رنگ متن هنگام هاور */
+    border-bottom: 2px solid #007bff; /* خط زیر متن هنگام هاور */
+  }
+  
+  .headerButton:focus {
+    outline: none; /* حذف استایل فوکوس پیش‌فرض */
+    border-bottom: 2px solid #0056b3; /* خط زیر هنگام فوکوس */
+  }
+  

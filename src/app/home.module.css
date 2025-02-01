@@ -1,0 +1,28 @@
+.ctaButton {
+    display: inline-block;
+    padding: 12px 24px;
+    background-color: #4CAF50; /* رنگ سبز برای دکمه */
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+    text-align: center;
+    border-radius: 8px;
+    text-decoration: none; /* حذف خط زیر لینک */
+    box-shadow: 0 4px 8px hsla(0, 0%, 0%, 0.1);
+  }
+  
+  .ctaButton:hover {
+    background-color: #45a049; /* رنگ پس‌زمینه هنگام هاور */
+    transform: translateY(-2px); /* تغییر موقعیت کمی هنگام هاور */
+  }
+  
+  .ctaButton:active {
+    background-color: #388e3c; /* رنگ پس‌زمینه هنگام کلیک */
+    transform: translateY(0);
+  }
+  
+  .ctaButton:focus {
+    outline: none; /* حذف outline پیش‌فرض */
+    box-shadow: 0 0 0 2px rgba(0, 123, 255, 0.5); /* شفافیت اضافی برای فوکوس */
+  }
+  

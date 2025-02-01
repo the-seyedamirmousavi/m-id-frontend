@@ -1,0 +1,45 @@
+.subMenuItem {
+    padding: 10px 5px;
+    font-size: 16px;
+    color: var(--primary-color); /* رنگ پیش‌فرض متن */
+    text-decoration: none;
+    transition: all 0.3s ease; /* انیمیشن روان */
+    background-color: transparent; /* پس‌زمینه شفاف */
+    cursor: pointer;
+    position: relative;
+  }
+  
+  .headerLink {
+    text-decoration: none; /* حذف خط زیر لینک */
+    color: var(--primary-color-active); /* رنگ لینک */
+  }
+  
+  .headerLink:hover {
+    color: var(--primary-color-hover); /* رنگ پیش‌فرض هنگام هاور */
+  }
+  
+  .headerLinkDisabled {
+    text-decoration: none;
+    color: #666; /* رنگ برای لینک غیر فعال */
+    cursor: not-allowed; /* نشان دادن اینکه لینک غیر فعال است */
+  }
+  
+  /* اضافه کردن نوار زیر لینک */
+  .subMenuItem::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -1px; /* فاصله خط از متن */
+    width: 100%;
+    height: 2px;
+    background-color: #0070f3; /* رنگ خط */
+    transform: scaleX(0);
+    transform-origin: right;
+    transition: transform 0.3s ease-out;
+  }
+  
+  .subMenuItem:hover::after {
+    transform: scaleX(1);
+    transform-origin: left;
+  }
+  

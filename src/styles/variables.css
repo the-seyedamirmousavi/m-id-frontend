@@ -1,10 +1,13 @@
+/* اضافه کردن فونت‌های Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&family=Inter:wght@400;600&display=swap');
+
 :root {
-    --primary-color: #2e3644;
+    --primary-color: #0070f3;
     --secondary-color: #2d353f; /* رنگ ثانویه */
     --background-color: #f0f2f5;
     --text-color: #000000; /* رنگ متن اصلی */
 
-    --primary-color-hover: #4b5a67; /* رنگ برای hover */
+    --primary-color-hover: #171c22; /* رنگ برای hover */
     --primary-color-active: #3f4c5b; /* رنگ برای active */
     --primary-color-focus: #35434c; /* رنگ برای focus */
 
@@ -16,4 +19,10 @@
     --error-color: #e74c3c; /* رنگ خطا */
     --success-color: #2ecc71; /* رنگ موفقیت */
     --warning-color: #f39c12; /* رنگ هشدار */
+}
+
+:root {
+    --font-primary: 'Roboto', sans-serif;
+    --font-secondary: 'Inter', sans-serif;
+    --font-heading: 'Montserrat', sans-serif;
 }

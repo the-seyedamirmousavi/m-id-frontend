@@ -1,0 +1,68 @@
+/* styles/WhatIsMID.module.css */
+.container {
+    font-family: 'Arial', sans-serif;
+    padding: 40px 20px;
+    background: #f8f9fa;
+    color: #333;
+  }
+  
+  .heroSection {
+    text-align: center;
+    margin-bottom: 40px;
+  }
+  
+  .title {
+    font-size: 3rem;
+    color: #0070f3;
+    font-weight: bold;
+    margin-bottom: 20px;
+  }
+  
+  .description {
+    font-size: 1.2rem;
+    line-height: 1.6;
+    color: #555;
+    max-width: 800px;
+    margin: 0 auto;
+  }
+  
+  .features {
+    margin-top: 40px;
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+  }
+  
+  .featuresTitle {
+    font-size: 2rem;
+    color: #0070f3;
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  .featuresList {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  .featureItem {
+    margin: 15px 0;
+  }
+  
+  .featureItem h3 {
+    font-size: 1.4rem;
+    color: #0070f3;
+  }
+  
+  .featureItem p {
+    font-size: 1.1rem;
+    color: #555;
+  }
+  
+  .featureItem:not(:last-child) {
+    border-bottom: 1px solid #ddd;
+    padding-bottom: 10px;
+    margin-bottom: 10px;
+  }
+  
