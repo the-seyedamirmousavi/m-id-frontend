@@ -6,6 +6,7 @@ import Header from '../components/Header';
 import '../styles/globals.css';
 import { AuthProvider } from './context/AuthContext';
 import 'bootstrap/dist/css/bootstrap.min.css';
+import Footer from '../components/Footer';
 
 export default function RootLayout({
   children,
@@ -25,7 +26,7 @@ export default function RootLayout({
       name: "Our Services", 
       subMenu: [
         { name: "Authorization Services", url: "/authorization-service" },
-        { name: "FitApp", url: "/the-second-phase" },
+        { name: "M-ID Health", url: "/the-second-phase" },
       ]
     },
     { 
@@ -37,7 +38,9 @@ export default function RootLayout({
     { 
       name: "Contact Us", 
       subMenu: [
-        { name: "Request Representation", url: "/the-third-phase", needAuth: true },
+        { name: "Report a Bug", url: "/user-requests?type=Bug Report", needAuth: false },
+        { name: "Request Unblocking", url: "/user-requests?type=Unblocking Request", needAuth: true },
+        { name: "Request Representation", url: "/register-representation", needAuth: false },
       ]
     },
   ];
@@ -45,12 +48,12 @@ export default function RootLayout({
   return (
     <html lang="en">
         <body style={{
-          backgroundColor: '#f0f2f5'
+          backgroundColor: '#f0f2f5',
         }}>
           
          <AuthProvider>
          <Header menuItems={menuItems} />
-         {children}
+          {children}
          </AuthProvider>
         </body>
     </html>

@@ -1,5 +1,4 @@
 'use client'; 
-
 import { useContext , createContext } from "react";
 import Head from "next/head";
 import Header from "../components/Header";
@@ -26,6 +25,7 @@ export default function Index() {
         height: '100vh', 
         overflowY: 'auto', 
         alignItems: 'center',
+        backgroundColor : '#f0f2f5',
         justifyContent: 'flex-start', 
       }}>
                 
@@ -37,7 +37,7 @@ export default function Index() {
           htmlContent={
             <Link 
               className={styles.ctaButton}
-              href="http://192.168.1.5:9000/oauth2/authorize?response_type=code&client_id=oidc-web-m-id&scope=profile&redirect_uri=http://localhost:3000/auth/callback/code&state=someState">Sign up</Link>  
+              href="http://localhost:9000/oauth2/authorize?response_type=code&client_id=oidc-web-m-id&scope=profile&redirect_uri=http://localhost:3000/auth/callback/code&state=someState">Sign up</Link>  
           }
         />
 
@@ -67,7 +67,7 @@ export default function Index() {
           htmlContent={
             <Link 
               className={`${styles.ctaButton} txt`}
-              href="http://192.168.1.5:9000/oauth2/authorize?response_type=code&client_id=oidc-web-mutec&scope=profile&redirect_uri=http://192.168.1.5:3000/auth/callback/code&state=someState">Sign up</Link>  
+              href="http://localhost:9000/oauth2/authorize?response_type=code&client_id=oidc-web-mutec&scope=profile&redirect_uri=http://192.168.1.5:3000/auth/callback/code&state=someState">Sign up</Link>  
           }
         />
 

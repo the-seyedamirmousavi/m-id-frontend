@@ -4,6 +4,7 @@ import styles from "./Header.module.css";
 import Logo from "./Logo";
 import { useAuth } from "../app/context/AuthContext";
 import SubMenuButton from "./SubMenuButton";
+import { usePathname } from 'next/navigation'
 
 const Header = ({ menuItems }) => {
   const [isHidden, setIsHidden] = useState(false);
@@ -11,8 +12,8 @@ const Header = ({ menuItems }) => {
   const [lastScrollY, setLastScrollY] = useState(0);
   const [isSubMenuVisible, setIsSubMenuVisible] = useState(false);
   const [activeMenuItem, setActiveMenuItem] = useState(null);
-  const [showHome, setShowHome] = useState(false);
-  const [isMenuOpen, setIsMenuOpen] = useState(false);
+
+  const pathname = usePathname()
 
   useEffect(() => {
     const handleScroll = () => {
@@ -57,7 +58,7 @@ const Header = ({ menuItems }) => {
             <div className={styles.menuToggle} onClick={toggleMenu}></div>
             <div className={styles.menuContainer} onMouseLeave={handleMouseLeave}>
               <div className={styles.menu}>
-                {showHome && (
+                {pathname!=="/" && (
                   <SubMenuButton
                     url="/"
                     name={"Back To Home"}
@@ -106,16 +107,23 @@ const Header = ({ menuItems }) => {
           </div>
 
           <div className={styles.headerRight}>
+          { (
+                <SubMenuButton
+                  name="Representation panel"
+                  closeMenu={{}}
+                  onClick={{}}
+                  url="/representation-panel"
+                />
+            )}
             {!isAuthenticated && !loading && (
-              <div className={styles.iconButton}>
                 <SubMenuButton
                   name="Login"
                   closeMenu={{}}
                   onClick={{}}
                   url="http://192.168.1.5:9000/oauth2/authorize?response_type=code&client_id=oidc-web-m-id&scope=profile&redirect_uri=http://localhost:3000/auth/callback/code&state=someState"
                 />
-              </div>
             )}
+            
           </div>
         </div>
       </header>

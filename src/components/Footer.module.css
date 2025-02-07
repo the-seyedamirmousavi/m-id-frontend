@@ -21,7 +21,7 @@
   }
   
   .footerLinks a {
-    color: #fff;
+    color: black;
     text-decoration: none;
     margin: 0 15px;
     transition: color 0.3s ease;
@@ -32,7 +32,7 @@
   }
   
   .socialLinks a {
-    color: #fff;
+    color: black;
     margin: 0 10px;
     font-size: 1.5rem;
     transition: color 0.3s ease;
@@ -44,7 +44,7 @@
   
   .copyright {
     font-size: 0.9rem;
-    color: #bbb;
+    color: black;
     margin-top: 20px;
   }
   

@@ -21,6 +21,7 @@
   transition: top 0.3s ease; /* انیمیشن برای پنهان شدن هدر */
   box-sizing: border-box;
   background-color: #ffffff;
+  animation: headerAppear 0.5s ease-out forwards;
   position: sticky; /* نمایش هدر در بالای صفحه هنگام اسکرول */
   top: 0;
   z-index: 1000;

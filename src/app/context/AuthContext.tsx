@@ -7,7 +7,9 @@ interface AuthContextType {
   loading: boolean;
   login: () => void;
   logout: () => void;
+  getAccessToken : () => string;
 }
+
 
 const AuthContext = createContext<AuthContextType | undefined>(undefined);
 
@@ -24,17 +26,12 @@ export const AuthProvider = ({ children }: { children: ReactNode }) => {
   const [loading, setLoading] = useState<boolean>(true);
 
     useEffect(() => {
-      const cookieValue = document.cookie
-      .split('; ')
-      .find((row) => row.startsWith('access_token='))
-      ?.split('=')[1];
-
         const checkAuth = async () => {
           try {
             const response = await fetch('http://192.168.1.5:9000/api/clients/isActive', {
               method: 'GET',
               headers: {
-                'Authorization': `Bearer ${cookieValue}`, 
+                'Authorization': `Bearer ${getAccessToken()}`, 
                 'Content-Type': 'application/json',
               }
             });
@@ -66,10 +63,23 @@ export const AuthProvider = ({ children }: { children: ReactNode }) => {
     setLoading(false);
   };
 
-  console.log("AuthProvider is running");
+  const getAccessToken = () => {
+      const cookieValue = document.cookie
+      .split('; ')
+      .find((row) => row.startsWith('access_token='))
+      ?.split('=')[1];
+      console.log(`cookieValue  ${cookieValue}`);
+
+      if (cookieValue) {
+        console.log(cookieValue);
+        return cookieValue;
+      } else {
+        return "";
+      } 
+    }
 
   return (
-    <AuthContext.Provider value={{ isAuthenticated, loading, login, logout }}>
+    <AuthContext.Provider value={{ isAuthenticated, loading, login, logout , getAccessToken }}>
       {children}
     </AuthContext.Provider>
   );

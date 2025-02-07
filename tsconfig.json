@@ -29,7 +29,7 @@
     ".next/types/**/*.ts",
     "**/*.ts",
     "**/*.tsx"
-, "src/app/auth/callback/code/page.js"  ],
+, "src/app/auth/callback/code/page.js", "src/app/register-mid-app/ClientForm.js"  ],
   "exclude": [
     "node_modules"
   ]
