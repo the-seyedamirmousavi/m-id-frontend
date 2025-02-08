@@ -28,7 +28,7 @@ export const AuthProvider = ({ children }: { children: ReactNode }) => {
     useEffect(() => {
         const checkAuth = async () => {
           try {
-            const response = await fetch('http://192.168.1.5:9000/api/clients/isActive', {
+            const response = await fetch('http://localhost:9000/api/clients/isActive', {
               method: 'GET',
               headers: {
                 'Authorization': `Bearer ${getAccessToken()}`, 

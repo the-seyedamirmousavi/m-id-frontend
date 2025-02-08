@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { useAuth } from "../context/AuthContext";
 import CircularProgress from "../../components/CircularProgress";
+import Link from "next/link";
 
 interface Client {
   id: number;
@@ -97,7 +98,11 @@ const MonitoringComponent: React.FC = () => {
                     style={{ width: "120px", height: "120px" }}
                   >
                     <CircularProgress remainingRequests={25} totalRequests={100} />
+                    <Link href={"/clients/upgrade"} className="btn btn-primary btn-sm w-100 mt-2">
+                      Upgrade
+                    </Link>
                   </div>
+
                 </div>
               </div>
             </div>

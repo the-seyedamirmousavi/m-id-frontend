@@ -32,7 +32,7 @@ export default function RootLayout({
     { 
       name: "Developers", 
       subMenu: [
-        { name: "Register OID Application", url: "/register-mid-app", needAuth: true },
+        { name: "Register OID Application", url: "/clients", needAuth: true },
       ]
     },
     { 

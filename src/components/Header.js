@@ -120,7 +120,7 @@ const Header = ({ menuItems }) => {
                   name="Login"
                   closeMenu={{}}
                   onClick={{}}
-                  url="http://192.168.1.5:9000/oauth2/authorize?response_type=code&client_id=oidc-web-m-id&scope=profile&redirect_uri=http://localhost:3000/auth/callback/code&state=someState"
+                  url="http://localhost:9000/oauth2/authorize?response_type=code&client_id=oidc-web-m-id&scope=profile&redirect_uri=http://localhost:3000/auth/callback/code&state=someState"
                 />
             )}
             

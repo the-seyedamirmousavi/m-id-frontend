@@ -1,8 +1,6 @@
 'use client';
 import { useState, useEffect } from "react";
 import Footer from "../../components/Footer";
-import TextParagraph from "../../components/TextParagraph";
-import TextTitle from "../../components/TextTitle";
 import RepresentationOverViewComponent from "./RepresentaionOverViewComponent"
 import TransactionHistory from "./TransactionHistory"
 import HelpAndSupport from "./HelpAndSupport"
