@@ -1,4 +1,7 @@
 @import url('variables.css');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
 .p {
     width: 80%;

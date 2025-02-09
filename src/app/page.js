@@ -15,6 +15,7 @@ export default function Index() {
         backgroundColor: 'var(--background-color)'
       }}>
                 
+        <div className="w-full h-screen bg-red-200"></div>
         <FullScreenSlider />
 
         <TextParagraph
