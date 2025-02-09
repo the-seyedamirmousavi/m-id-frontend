@@ -5,31 +5,44 @@
 }
 
 .metaHeader {
-  position: fixed; /* ثابت در بالای صفحه */
+  position: sticky; /* ثابت در بالای صفحه */
   top: 0; /* فاصله از بالای صفحه */
   left: 0;
   width: 100%; /* به کل عرض صفحه گسترش پیدا می‌کند */
-  z-index: 1000; /* لایه هدر بالاتر از دیگر المان‌ها */
-  transition: transform 0.3s ease; /* انیمیشن برای مخفی یا ظاهر شدن */
+  z-index: 1050; /* مقدار بالا برای نمایش در بالای همه */
 }
 
-.header {
+.metaHeaderMobile {
+  display: none;
+}
+
+.layoutOverlay {
+  display: none;
+}
+
+.metaHeaderLarg {
   display: flex;
+}
+.header {
   justify-content: space-between;
   width: 100%;
   padding: 10px 20px;
-  transition: top 0.3s ease; /* انیمیشن برای پنهان شدن هدر */
   box-sizing: border-box;
-  background-color: #ffffff;
-  animation: headerAppear 0.5s ease-out forwards;
-  position: sticky; /* نمایش هدر در بالای صفحه هنگام اسکرول */
   top: 0;
   z-index: 1000;
+}
+.menuToggle {
+  display: none;
 }
 
 .headerLeft,
 .headerRight {
   display: flex;
+}
+.headerLeft {
+  display: flex;               /* اگر قبلاً به عنوان flex container تعریف نشده */
+  justify-content: flex-start; /* آیتم‌ها در جهت اصلی (افقی) به سمت چپ چین می‌شوند */
+  text-align: left;            /* متن داخل آیتم‌ها به صورت چپ‌چین نمایش داده می‌شود */
 }
 
 .headerRight {
@@ -64,6 +77,15 @@
   transform: translateY(-10px); /* منو به صورت عمودی کمی بالاتر از حالت عادی قرار دارد */
   transition: opacity 0.5s ease, transform 0.5s ease; /* انیمیشن برای opacity و translateY */
 }
+
+.logoContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-grow: 1;
+}
+
+
 
 /* زمانی که موس روی دکمه کلیک می‌شود */
 .iconButton:hover + .subMenu {
@@ -103,10 +125,39 @@
 }
 
 
+
 /* Media Query برای موبایل */
 @media (max-width: 768px) {
+  /* تنظیمات هدر در موبایل */
+
+  .metaHeaderLarg {
+    display: none;
+  }
+  .layoutOverlay {
+    display: flex;
+  }
+  .metaHeaderMobile {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+  }
+  
+  .logoContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-grow: 1;
+    max-width: fit-content; /* عرض متناسب با محتوا */
+    white-space: nowrap; /* جلوگیری از شکستن متن */
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+  }
+  
+  
   .header {
-    flex-direction: column; /* تغییر جهت به عمودی */
     padding: 10px;
   }
 
@@ -114,46 +165,33 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    width: 100%;
   }
 
-  .menuContainer {
-    display: none; /* پنهان کردن منوی اصلی */
-    flex-direction: column; /* منو به صورت عمودی */
-    background-color: #ffffff; /* رنگ پس‌زمینه منو */
-    position: absolute; /* منو به صورت شناور */
-    top: 60px; /* زیر هدر قرار گیرد */
-    left: 0;
-    width: 100%; /* عرض کامل صفحه */
-    z-index: 1000;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* سایه برای منو */
-  }
-
+  /* زمانی که منوی موبایل فعال است */
   .menuContainer.active {
-    display: flex; /* نمایش منوی موبایل */
+    display: flex;
   }
 
-  .iconButton {
-    font-size: 14px; /* کوچک‌تر کردن اندازه متن */
-    margin: 10px 0; /* فاصله بین گزینه‌های منو */
-  }
-
+  /* دکمه منوی همبرگری در موبایل که برای باز/بستن منو استفاده می‌شود */
   .menuToggle {
-    display: block; /* نمایش آیکون منوی همبرگری */
-    cursor: pointer;
+    display: flex;
   }
 
+  /* تنظیمات دلخواه برای بخش سمت راست هدر در موبایل (در صورت نیاز) */
   .headerRight {
-    display: none; /* مخفی کردن بخش راست هدر در موبایل */
+    display: flex;
+    /* به عنوان مثال: می‌توانید اندازه یا فاصله‌دهی را تنظیم کنید */
   }
 
+  /* تنظیمات زیرمنو (در صورت استفاده در موبایل) */
   .subMenu {
-    grid-template-columns: 1fr; /* زیرمنو تک‌ستونی شود */
-    gap: 5px; /* کاهش فاصله بین آیتم‌ها */
+    grid-template-columns: 1fr; /* زیرمنو به صورت تک ستونی */
+    gap: 5px;
   }
 
   .subMenuItem {
-    font-size: 14px; /* کوچک‌تر کردن فونت زیرمنو */
+    font-size: 14px; /* فونت کوچک‌تر برای زیرمنو */
     padding: 10px;
   }
 }
+

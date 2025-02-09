@@ -1,5 +1,6 @@
 import Head from 'next/head'; 
 import { faFacebook, faInstagram, faTwitter, faLinkedin, faYoutube, faTelegram, faWhatsapp, faGithub } from '@fortawesome/free-brands-svg-icons';
+import { faBars } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 const Footer = () => {
   return (

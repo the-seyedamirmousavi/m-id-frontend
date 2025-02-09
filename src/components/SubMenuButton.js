@@ -10,7 +10,6 @@ const SubMenuButton = ({ name, url, needAuth, isAuthenticated, onClick , closeMe
       };
   return (
     <div className={styles.subMenuItem}>
-        
       {!needAuth ? (
         <Link
           href={url}

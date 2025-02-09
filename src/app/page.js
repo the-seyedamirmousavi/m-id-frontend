@@ -1,7 +1,4 @@
 'use client'; 
-import { useContext , createContext } from "react";
-import Head from "next/head";
-import Header from "../components/Header";
 import Footer from "../components/Footer";
 import ImageWithTitles from "../components/ImageWithTitles";
 import LastNews from "../components/LastNews";
@@ -14,19 +11,8 @@ export default function Index() {
 
 
   return (
-    <>
-      <Head>
-        <title>M-ID</title>
-        <meta name="description" content="Welcome to M-ID - Technology for well-being" />
-      </Head>
-
-      <div style={{ 
-        width: '100vw',
-        height: '100vh', 
-        overflowY: 'auto', 
-        alignItems: 'center',
-        backgroundColor : '#f0f2f5',
-        justifyContent: 'flex-start', 
+      <div style={{
+        backgroundColor: 'var(--background-color)'
       }}>
                 
         <FullScreenSlider />
@@ -75,6 +61,5 @@ export default function Index() {
         <Footer />
 
       </div>
-    </>
   );
 }

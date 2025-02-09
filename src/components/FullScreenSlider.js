@@ -73,8 +73,8 @@ export default function FullScreenSlider() {
         </div>
       </div>
       <div className={styles.child2} style={{ flex: '6' }}>
-        <h1 className='txt'>{slides[currentIndex]?.title}</h1>
-        <p className='txt'>{slides[currentIndex]?.description}</p>
+        <h1>{slides[currentIndex]?.title}</h1>
+        <p>{slides[currentIndex]?.description}</p>
         <div>
           {/* دکمه‌های کنترلی برای تغییر دستی اسلاید */}
           

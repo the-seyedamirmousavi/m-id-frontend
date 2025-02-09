@@ -1,49 +1,52 @@
+/* استایل‌های اصلی (دسکتاپ) */
 .container {
   display: flex;
+  height: calc(100vh - 80px);
   width: 80%;
-  height: 100vh;
-  gap: 50px; 
   align-items: center;
-  margin: 0 auto;
+  justify-content: center;     /* مرکز کردن افقی محتوا */
+  margin: 0 auto;              /* مرکز کردن container در صفحه */
+  gap: 5%;                   /* فاصله بین المان‌ها */
 }
 
 .container.reverse {
-  flex-direction: row-reverse; /* جابه‌جایی ترتیب عناصر */
+  flex-direction: row-reverse; /* جابه‌جایی ترتیب عناصر در حالت معکوس */
 }
 
 .child {
-    position: relative;
-    display: flex; /* فعال‌سازی flexbox */
-    justify-content: center; /* مرکز کردن افقی */
-    height: auto;
-    object-fit: cover; 
-    align-items: center; /* مرکز کردن عمودی */
+  position: relative;
+  flex: 1;                     /* اختصاص فضای برابر برای المان‌ها */
+  display: flex;
+  justify-content: center;     /* مرکز کردن افقی تصویر */
+  align-items: center;         /* مرکز کردن عمودی تصویر */
+  object-fit: cover;
 }
 
 .child2 {
-    position: relative;
-    display: flex; /* فعال‌سازی flexbox */
-    justify-content: center; /* مرکز کردن افقی */
-    flex-direction: column;
+  position: relative;
+  flex: 1;                     /* اختصاص فضای برابر برای المان‌ها */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;     /* مرکز کردن محتوا به صورت عمودی */
 }
 
 .img {
   width: 90%;
-  object-fit: cover; /* تناسب تصویر حفظ شود */
-  aspect-ratio: 2 / 3; /* نسبت مستطیل (عرض 3 به ارتفاع 2) */
+  object-fit: cover;           /* حفظ تناسب تصویر */
+  aspect-ratio: 2 / 3;          /* نسبت تصویر (مثلاً 2:3) */
   position: relative;
   border-radius: 20px;
   overflow: hidden;
 }
 
-/* عنوان اصلی */
+/* استایل عنوان اصلی */
 .child2 h1 {
   font-size: 2.5rem;
   font-weight: 700;
   color: #333333;
   line-height: 1.4;
   margin-bottom: 20px;
-  text-align: left; /* متن به سمت چپ */
+  text-align: left;
 }
 
 /* استایل پاراگراف */
@@ -52,39 +55,52 @@
   font-weight: 400;
   color: #666666;
   line-height: 1.8;
-  text-align: justify; /* متن کاملاً تراز */
+  text-align: justify;
   margin: 0;
 }
 
+/* Media Query برای تبلت (حداکثر عرض 1024px) */
 @media (max-width: 1024px) {
   .container {
-      display: flex;
-      width: 90%;
-      gap: 0px; 
-      margin: 60px auto;
-      flex-direction: column;
-      height: auto;
-    }
-
-    .img {
-      width: 100%;
-      aspect-ratio: 1 / 1; /* مربع، چون عرض = ارتفاع */
-    }
-  
-  .child {
-      position: relative;
-      flex: 1;
-      width: 100%;
+    height: auto;
+    width: 90%;
+    padding-top: 5%;
+    padding-bottom: 5%;
+    gap: 5%;
+    flex-direction: column;   /* تغییر ترتیب به صورت عمودی */
+    margin: 0 auto;
   }
 
+  .container.reverse {
+    flex-direction: column;
+  }
+
+  .img {
+    width: 100%;
+    aspect-ratio: 1 / 1;       /* تبدیل تصویر به شکل مربع */
+  }
+
+  .child,
   .child2 {
-      position: relative;
-      width: 100%;
-      flex: 1;
-      display: flex; /* فعال‌سازی flexbox */
-      flex-direction: column; /* مرتب‌سازی محتوا به صورت عمودی */
-      justify-content: flex-start; /* چسباندن محتوا به بالا */
-      align-items: flex-start; /* چسباندن محتوا به سمت چپ (در صورت نیاز) */
+    width: 100%;
+  }
+
+  .child2 h1 {
+    font-size: 1.8rem;
+  }
+
+  .child2 p {
+    font-size: 1rem;
+  }
+}
+
+/* Media Query برای موبایل (حداکثر عرض 600px) */
+@media (max-width: 600px) {
+  .container {
+    width: 95%;
+    gap: 10%;
+    padding-top: 5%;
+    padding-bottom: 5%;
   }
 
   .child2 h1 {
@@ -92,11 +108,6 @@
   }
 
   .child2 p {
-    font-size: 1rem;
+    font-size: 0.9rem;
   }
-
-  .container.reverse {
-    flex-direction: column; /* جابه‌جایی ترتیب عناصر */
-  }
-
 }

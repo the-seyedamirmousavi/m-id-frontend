@@ -26,12 +26,10 @@ export default function VisionMission() {
       }}>
 
         <TextTitle title={"We believe that small steps can create big changes"} />
-
         <TextParagraph 
         title={"Every story started from a need, but M-ID it was formed from a dream"} 
         paragraph={"Eight years ago, the idea of creating an 'Iranian Microsoft' took shape in my mind. Over the years, this vision has grown and evolved, becoming a goal I have relentlessly pursued. Today, after years of hard work and dedication, I am proud to announce that the initial phases of this idea have come to life, and you can now experience some of its early offerings."} 
        />
-
 
         <ImageWithTitles
             imageSrc="/images/FitSho.png"
@@ -47,9 +45,6 @@ export default function VisionMission() {
                 )
             }}
         />
-
-
-
 
         <TextParagraph 
           title={"Our Vision & Mission"} 

@@ -1,45 +1,62 @@
 .subMenuItem {
-    padding: 10px 5px;
-    font-size: 16px;
-    color: var(--primary-color); /* رنگ پیش‌فرض متن */
-    text-decoration: none;
-    transition: all 0.3s ease; /* انیمیشن روان */
-    background-color: transparent; /* پس‌زمینه شفاف */
-    cursor: pointer;
-    position: relative;
+  padding: 5px 0px;
+  font-size: 1rem; /* اندازه متن پیش‌فرض */
+  color: var(--primary-color); /* رنگ پیش‌فرض متن */
+  text-decoration: none;
+  transition: all 0.3s ease; /* انیمیشن روان */
+  background-color: transparent; /* پس‌زمینه شفاف */
+  cursor: pointer;
+  position: relative;
+}
+
+/* برای صفحه‌نمایش‌های کوچکتر از 768px (تبلت و موبایل) */
+@media (max-width: 768px) {
+  .subMenuItem {
+    font-size: 0.9rem; /* کاهش سایز متن برای موبایل */
+    padding: 4px 0px; /* کاهش فاصله بالا و پایین */
   }
-  
-  .headerLink {
-    text-decoration: none; /* حذف خط زیر لینک */
-    color: var(--primary-color-active); /* رنگ لینک */
-  }
-  
-  .headerLink:hover {
-    color: var(--primary-color-hover); /* رنگ پیش‌فرض هنگام هاور */
-  }
-  
-  .headerLinkDisabled {
-    text-decoration: none;
-    color: #666; /* رنگ برای لینک غیر فعال */
-    cursor: not-allowed; /* نشان دادن اینکه لینک غیر فعال است */
-  }
-  
-  /* اضافه کردن نوار زیر لینک */
+}
+
+.headerLink {
+  display: flex;
+  height: 100%;
+  text-decoration: none; /* حذف خط زیر لینک */
+  color: var(--primary-color-active); /* رنگ لینک */
+  align-items: center;
+}  
+
+.headerLink:hover {
+  color: var(--primary-color-hover); /* رنگ پیش‌فرض هنگام هاور */
+}
+
+.headerLinkDisabled {
+  text-decoration: none;
+  color: #666; /* رنگ برای لینک غیر فعال */
+  cursor: not-allowed; /* نشان دادن اینکه لینک غیر فعال است */
+}
+
+/* اضافه کردن نوار زیر لینک */
+.subMenuItem::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -1px; /* فاصله خط از متن */
+  width: 100%;
+  height: 2px;
+  background-color: #0070f3; /* رنگ خط */
+  transform: scaleX(0);
+  transform-origin: right;
+  transition: transform 0.3s ease-out;
+}
+
+/* تغییرات برای موبایل */
+@media (max-width: 768px) {
   .subMenuItem::after {
-    content: "";
-    position: absolute;
-    left: 0;
-    bottom: -1px; /* فاصله خط از متن */
-    width: 100%;
-    height: 2px;
-    background-color: #0070f3; /* رنگ خط */
-    transform: scaleX(0);
-    transform-origin: right;
-    transition: transform 0.3s ease-out;
+    height: 1px; /* نوار زیر لینک را نازک‌تر می‌کنیم */
   }
-  
-  .subMenuItem:hover::after {
-    transform: scaleX(1);
-    transform-origin: left;
-  }
-  
+}
+
+.subMenuItem:hover::after {
+  transform: scaleX(1);
+  transform-origin: left;
+}
