@@ -42,18 +42,19 @@ export default function RootLayout({
   ];
 
   return (
-    <html lang="en">
-      <head>
-        {/* اضافه کردن متا تگ‌ها، عنوان صفحه و ... در اینجا */}
-      </head>
-      <body style={{ backgroundColor: 'light' }}>
-        <AuthProvider>
-          <Header menuItems={menuItems} />
-          <main>
-            {children}
-          </main>
-        </AuthProvider>
-      </body>
-    </html>
-  );
+  <html lang="en">
+    <head>
+      {/* اضافه کردن متا تگ‌ها، عنوان صفحه و ... در اینجا */}
+    </head>
+    <body className="bg-light flex flex-col min-h-screen">
+      <AuthProvider>
+        {/* هدر ثابت در بالای صفحه */}
+        <Header menuItems={menuItems} />
+        {/* محتوای صفحه */}
+        <main className="flex-grow">{children}</main>
+      </AuthProvider>
+    </body>
+  </html>
+);
+
 }
