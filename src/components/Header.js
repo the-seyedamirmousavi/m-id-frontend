@@ -51,7 +51,7 @@ const Header = ({ menuItems }) => {
       )}
 
       {/* ********************************* Header ********************************* */}
-      <header className={`bg-light ${styles.metaHeader} ${isHidden ? styles.hidden : ""}`}>
+      <header className={`bg-light top-0 ${styles.metaHeader} ${isHidden ? styles.hidden : ""}`}>
         {/* ********************************* (برای لپ تاپ) ********************************* */}
         <div className={`${styles.header} ${styles.metaHeaderLarg}`}>
           
@@ -122,7 +122,7 @@ const Header = ({ menuItems }) => {
         </div>
 
         {/* ********************************* (برای موبایل) ********************************* */}
-        <div className={`bg-light ${styles.header} ${styles.metaHeaderMobile}`}>
+        <div className={`bg-light top-0 ${styles.header} ${styles.metaHeaderMobile}`}>
         {/* دکمه منوی همبرگری (برای موبایل) */}
         <div className={styles.headerLeft}>
           <div className={`${styles.menuToggle}`} onClick={toggleMobileMenu}>
@@ -154,7 +154,7 @@ const Header = ({ menuItems }) => {
       {/* ********************************* Layout ********************************* */}
       {showMobileMenu && (
         <div
-          className={`position-fixed top-0 start-0 w-100 h-100 bg-light ${styles.layoutOverlay}`}
+          className={`position-fixed top-0 start-0 w-full h-full bg-light ${styles.layoutOverlay}`}
           style={{ zIndex: 1010 }}
         >
           <div className="container pt-4">

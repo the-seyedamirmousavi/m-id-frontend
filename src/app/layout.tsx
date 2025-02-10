@@ -51,7 +51,7 @@ export default function RootLayout({
         {/* هدر ثابت در بالای صفحه */}
         <Header menuItems={menuItems} />
         {/* محتوای صفحه */}
-        <main className="flex-grow">{children}</main>
+        <main className="flex-grow top-0">{children}</main>
       </AuthProvider>
     </body>
   </html>

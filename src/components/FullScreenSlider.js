@@ -61,25 +61,21 @@ export default function FullScreenSlider() {
   };
 
   return (
-    <div className={styles.container}>
-      <div className={styles.child} style={{ flex: '4' }}>
-        <div className={styles.img}>
-          <Image
-            src={slides[currentIndex].image} 
-            alt={slides[currentIndex].title} 
-            fill
-            style={{ objectFit: 'cover' }}
-          />
+  <div className='h-screen justify-center flex top-0 w-full px-3 py-3 flex-col md:flex-row'>
+    <div className='h-1/2 items-center justify-center flex md:w-2/4 md:h-full'>
+      <div className={`${styles.img} w-full h-full md:h-4/5`}>
+            <Image
+              src={slides[currentIndex].image} 
+              alt={slides[currentIndex].title} 
+              fill
+              style={{ objectFit: 'cover' }}
+            />
         </div>
-      </div>
-      <div className={styles.child2} style={{ flex: '6' }}>
-        <h1>{slides[currentIndex]?.title}</h1>
-        <p>{slides[currentIndex]?.description}</p>
-        <div>
-          {/* دکمه‌های کنترلی برای تغییر دستی اسلاید */}
-          
-        </div>
-      </div>
     </div>
+    <div className='h-1/4  flex flex-col md:h-full md:w-3/4 md:my-0 md:items-center md:justify-center'>
+      <h1 className="text-[2.5rem] font-bold text-gray-800 leading-[1.4] mb-5 text-left">{slides[currentIndex]?.title}</h1>
+      <p className="text-lg text-gray-600">{slides[currentIndex]?.description}</p>
+    </div>
+  </div>
   );
 }

@@ -1,26 +1,27 @@
 /* اضافه کردن فونت‌های Google Fonts */
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&family=Inter:wght@400;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&family=Inter:wght@400;600&family=Montserrat:wght@600;700&display=swap');
 
 :root {
-    --primary-color: #031122;
-    --secondary-color: #2d353f; /* رنگ ثانویه */
-    --background-color: #f0f2f5;
-    --text-color: #000000; /* رنگ متن اصلی */
+    --primary-color: #0A192F; /* رنگ اصلی عمیق‌تر و حرفه‌ای‌تر */
+    --secondary-color: #1F2937; /* رنگ ثانویه با تضاد مناسب */
+    --background-color: #F8FAFC; /* رنگ پس‌زمینه لطیف‌تر */
+    --text-color: #111827; /* رنگ متن بهبود‌یافته برای خوانایی بیشتر */
 
-    --primary-color-hover: #171c22; /* رنگ برای hover */
-    --primary-color-active: #3f4c5b; /* رنگ برای active */
-    --primary-color-focus: #35434c; /* رنگ برای focus */
+    --primary-color-hover: #112240; /* رنگ برای hover */
+    --primary-color-active: #1E3A8A; /* رنگ برای active */
+    --primary-color-focus: #1E40AF; /* رنگ برای focus */
 
-    --secondary-color-hover: #4b5d66; /* رنگ برای hover در دکمه‌های ثانویه */
-    --secondary-color-active: #43535c; /* رنگ برای active در دکمه‌های ثانویه */
-    --secondary-color-focus: #3b4953; /* رنگ برای focus در دکمه‌های ثانویه */
+    --secondary-color-hover: #374151; /* رنگ برای hover در دکمه‌های ثانویه */
+    --secondary-color-active: #4B5563; /* رنگ برای active در دکمه‌های ثانویه */
+    --secondary-color-focus: #6B7280; /* رنگ برای focus در دکمه‌های ثانویه */
 
-    --border-color: #d1d8e0; /* رنگ حاشیه */
-    --error-color: #e74c3c; /* رنگ خطا */
-    --success-color: #2ecc71; /* رنگ موفقیت */
-    --warning-color: #f39c12; /* رنگ هشدار */
+    --border-color: #CBD5E1; /* رنگ حاشیه با ملایمت بیشتر */
+    --error-color: #DC2626; /* رنگ خطا */
+    --success-color: #16A34A; /* رنگ موفقیت */
+    --warning-color: #F59E0B; /* رنگ هشدار */
 }
 
+/* فونت‌های استاندارد */
 :root {
     --font-primary: 'Roboto', sans-serif;
     --font-secondary: 'Inter', sans-serif;

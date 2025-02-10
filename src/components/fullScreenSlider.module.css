@@ -31,6 +31,7 @@
 }
 
 .img {
+  display: flex;
   width: 90%;
   object-fit: cover;           /* حفظ تناسب تصویر */
   aspect-ratio: 2 / 3;          /* نسبت تصویر (مثلاً 2:3) */
