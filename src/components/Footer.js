@@ -38,26 +38,23 @@ const Footer = () => {
             <p className="text-muted">
               Stay connected with us on social media!
             </p>
-            <div className="d-flex justify-content-start">
+            <div className="d-flex  justify-center md:justify-start">
               
               {/* آیکون‌های شبکه‌های اجتماعی */}
               
-                <a href="https://instagram.com" className="text-dark me-3" target="_blank" rel="noopener noreferrer">
+                <a href="https://instagram.com/m_id_ir" className="text-dark me-3" target="_blank" rel="noopener noreferrer">
                   <FontAwesomeIcon icon={faInstagram} size="2x" />
                 </a>
-                <a href="https://twitter.com" className="text-dark me-3" target="_blank" rel="noopener noreferrer">
-                  <FontAwesomeIcon icon={faTwitter} size="2x" />
-                </a>
-                <a href="https://linkedin.com" className="text-dark me-3" target="_blank" rel="noopener noreferrer">
+                <a href="https://linkedin.com/company/m-id-ir" className="text-dark me-3" target="_blank" rel="noopener noreferrer">
                   <FontAwesomeIcon icon={faLinkedin} size="2x" />
                 </a>
-                <a href="https://youtube.com" className="text-dark me-3" target="_blank" rel="noopener noreferrer">
+                <a href="https://youtube.com/@M-ID-f4j" className="text-dark me-3" target="_blank" rel="noopener noreferrer">
                   <FontAwesomeIcon icon={faYoutube} size="2x" />
                 </a>
-                <a href="https://t.me" className="text-dark me-3" target="_blank" rel="noopener noreferrer">
+                <a href="https://t.me/m_id_ir" className="text-dark me-3" target="_blank" rel="noopener noreferrer">
                   <FontAwesomeIcon icon={faTelegram} size="2x" />
                 </a>
-                <a href="https://github.com" className="text-dark me-3" target="_blank" rel="noopener noreferrer">
+                <a href="https://github.com/the-seyedamirmousavi" className="text-dark me-3" target="_blank" rel="noopener noreferrer">
                   <FontAwesomeIcon icon={faGithub} size="2x" />
                 </a>
             </div>
