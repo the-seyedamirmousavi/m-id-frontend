@@ -16,7 +16,7 @@ const HelpAndSupport = () => {
     };
 
     return (
-        <div className="help-and-support" style={{ padding: '20px', margin: 'auto' }}>
+        <div className="w-full">
             <section>
                 <h3>Frequently Asked Questions</h3>
                 <ul style={{ listStyle: "none", padding: 0 }}>

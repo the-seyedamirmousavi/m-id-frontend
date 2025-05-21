@@ -1,7 +1,7 @@
 /* استایل‌های اصلی (دسکتاپ) */
 .container {
   display: flex;
-  height: calc(100vh - 80px);
+  height: 100vh;
   width: 80%;
   align-items: center;
   justify-content: center;     /* مرکز کردن افقی محتوا */
@@ -86,13 +86,6 @@
     width: 100%;
   }
 
-  .child2 h1 {
-    font-size: 1.8rem;
-  }
-
-  .child2 p {
-    font-size: 1rem;
-  }
 }
 
 /* Media Query برای موبایل (حداکثر عرض 600px) */
@@ -104,11 +97,5 @@
     padding-bottom: 5%;
   }
 
-  .child2 h1 {
-    font-size: 1.5rem;
-  }
 
-  .child2 p {
-    font-size: 0.9rem;
-  }
 }

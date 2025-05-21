@@ -4,7 +4,7 @@ export default function RepresentationOverViewComponent() {
   const [copied, setCopied] = useState(false);
 
   return (
-    <div className="container mt-4">
+    <div className="w-full">
       
       {/* Overview Statistics */}
       <div className="row mb-4">

@@ -46,12 +46,12 @@ export default function RootLayout({
     <head>
       {/* اضافه کردن متا تگ‌ها، عنوان صفحه و ... در اینجا */}
     </head>
-    <body className="bg-light flex flex-col min-h-screen">
+    <body className="bg-white flex-col min-h-screen">
       <AuthProvider>
         {/* هدر ثابت در بالای صفحه */}
         <Header menuItems={menuItems} />
         {/* محتوای صفحه */}
-        <main className="flex-grow top-0">{children}</main>
+        <main className="h-screen flex-grow top-0 bg-background">{children}</main>
       </AuthProvider>
     </body>
   </html>

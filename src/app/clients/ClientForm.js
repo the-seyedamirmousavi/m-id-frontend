@@ -61,8 +61,7 @@ const ClientForm = () => {
   };
 
   return (
-    <div className="w-100 p-4">
-      <h1 className="h2 mb-4 text-center">Create Your Own Client</h1>
+    <div className="w-full">
       {error && <div className="alert alert-danger">{error}</div>}
       <form onSubmit={createClient}>
         <div className="mb-3">
@@ -118,7 +117,7 @@ const ClientForm = () => {
           ))}
         </div>
 
-        <button type="submit" className="btn btn-primary w-100 py-2">Create Client</button>
+        <button type="submit" className="btn btn-primary w-100 py-2 !border-btn-primary !bg-btn-primary">Create Client</button>
       </form>
     </div>
   );

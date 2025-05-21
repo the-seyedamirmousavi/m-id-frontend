@@ -2,23 +2,23 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&family=Inter:wght@400;600&family=Montserrat:wght@600;700&display=swap');
 
 :root {
-    --primary-color: #0A192F; /* رنگ اصلی عمیق‌تر و حرفه‌ای‌تر */
-    --secondary-color: #1F2937; /* رنگ ثانویه با تضاد مناسب */
-    --background-color: #F8FAFC; /* رنگ پس‌زمینه لطیف‌تر */
-    --text-color: #111827; /* رنگ متن بهبود‌یافته برای خوانایی بیشتر */
+    --primary-color: #1C1E24; /* رنگ اصلی نزدیک به زغال‌سنگی */
+    --secondary-color: #25272E; /* رنگ ثانویه تیره‌تر */
+    --background-color: #F3F4F6; /* پس‌زمینه کمی روشن‌تر برای کنتراست بهتر */
+    --text-color: #E5E7EB; /* رنگ متن خاکستری-روشن برای خوانایی بیشتر */
 
-    --primary-color-hover: #112240; /* رنگ برای hover */
-    --primary-color-active: #1E3A8A; /* رنگ برای active */
-    --primary-color-focus: #1E40AF; /* رنگ برای focus */
+    --primary-color-hover: #23252B; /* رنگ تیره‌تر برای hover */
+    --primary-color-active: #2C2F36; /* رنگ برای active */
+    --primary-color-focus: #3A3D44; /* رنگ برای focus */
 
-    --secondary-color-hover: #374151; /* رنگ برای hover در دکمه‌های ثانویه */
-    --secondary-color-active: #4B5563; /* رنگ برای active در دکمه‌های ثانویه */
-    --secondary-color-focus: #6B7280; /* رنگ برای focus در دکمه‌های ثانویه */
+    --secondary-color-hover: #2F3138;
+    --secondary-color-active: #40434A;
+    --secondary-color-focus: #52555D;
 
-    --border-color: #CBD5E1; /* رنگ حاشیه با ملایمت بیشتر */
-    --error-color: #DC2626; /* رنگ خطا */
-    --success-color: #16A34A; /* رنگ موفقیت */
-    --warning-color: #F59E0B; /* رنگ هشدار */
+    --border-color: #5A5D66; /* رنگ حاشیه زغالی */
+    --error-color: #B91C1C; /* رنگ خطا تیره‌تر */
+    --success-color: #15803D; /* رنگ موفقیت */
+    --warning-color: #D97706; /* رنگ هشدار */
 }
 
 /* فونت‌های استاندارد */

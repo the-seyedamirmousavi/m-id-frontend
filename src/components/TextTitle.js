@@ -3,7 +3,7 @@ import styles from './styles/textTitle.module.css';
 
 const TextTitle = ({title}) => {
   return (
-    <div className={`${styles.container}`}>
+    <div className={`h-screen ${styles.container}`}>
         <h1 className={styles.textTitle}>
             {title}
         </h1>

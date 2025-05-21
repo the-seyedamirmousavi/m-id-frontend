@@ -79,7 +79,7 @@ export default function RegisterRepresentaionForm() {
                 </label>
             </div>
             <button 
-                className="btn btn-primary mt-4" 
+                className="my-btn my-btn-primary mt-4" 
                 disabled={!isChecked}
             >
                 Submit

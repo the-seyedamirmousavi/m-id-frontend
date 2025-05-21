@@ -38,7 +38,7 @@ const LastNews = () => {
   ];
 
   return (
-    <div className="w-full md:w-[90%] mx-auto p-6 rounded-lg my-10">
+    <div className="w-full bg-background md:w-[90%] mx-auto p-6 rounded-lg my-10">
       <h2 className="text-3xl font-bold mb-6 text-center">Latest News</h2>
       <div className="overflow-x-auto scrollbar-hide">
         {/* تغییر justify-center به justify-start */}

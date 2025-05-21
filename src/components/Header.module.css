@@ -1,7 +1,6 @@
 .headerContainer {
   width: 100%;
   height: auto;
-  background-color: #ffffff;
 }
 
 .metaHeader {
@@ -54,7 +53,6 @@
   text-decoration: none;
   background: none;
   border: none;
-  color: var(--text-color);
   height: "50px";
   font-size: 16px;
   font-weight: 600;
@@ -98,7 +96,6 @@
 .subMenuItem {
   padding: 5px 15px;
   font-size: 16px;
-  color: #0f0f0f; /* رنگ پیش‌فرض متن */
   text-decoration: none;
   transition: all 0.3s ease; /* انیمیشن روان */
   background-color: transparent; /* پس‌زمینه شفاف */

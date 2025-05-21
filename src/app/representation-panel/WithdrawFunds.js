@@ -14,9 +14,9 @@ export default function WithdrawFunds() {
   };
 
   return (
-    <div className="container mt-5">
+    <div className="w-full">
       <div className="card shadow-sm">
-        <div className="card-header bg-primary text-white">
+        <div className="card-header text-[#0A192F]">
           <h4 className="mb-0">Withdrawal Request</h4>
         </div>
         <div className="card-body">
@@ -41,7 +41,8 @@ export default function WithdrawFunds() {
               onChange={(e) => setAmount(e.target.value)}
             />
           </div>
-          <button className="btn btn-success w-100" onClick={handleWithdraw}>
+          <button className="bg-[#0A192F] text-white px-4 py-2 rounded-lg hover:bg-[#172A45] transition w-full" 
+          onClick={handleWithdraw}>
             Submit Withdrawal Request
           </button>
         </div>

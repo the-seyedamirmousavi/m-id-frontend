@@ -1,6 +1,5 @@
 'use client'; 
 import Head from "next/head";
-import Header from "../../components/Header";
 import Footer from "../../components/Footer";
 import ImageWithTitles from "../../components/ImageWithTitles";
 import TextParagraph from "../../components/TextParagraph";
@@ -16,11 +15,7 @@ export default function Index() {
       </Head>
 
       <div style={{ 
-        width: '100vw', 
         height: '100vh', 
-        overflowY: 'auto', 
-        alignItems: 'center',
-        justifyContent: 'flex-start', 
       }}>
         
         <TextTitle title={"Ready to elevate your app’s security to the next level ?"} />
@@ -40,7 +35,6 @@ export default function Index() {
           reverse={true}
         />
 
-
         <ImageWithTitles
           imageSrc="/images/FitSho.png"
           altText="FitSho Image"
@@ -51,12 +45,10 @@ export default function Index() {
           reverse={false}
         />
 
-
         <TextParagraph
           title={"Professional and Accessible Support"}
           paragraph={"At M-ID, we are committed to providing you with top-notch support. Our dedicated team is ready to assist you at every stage, from setup to troubleshooting. Whether you explore our comprehensive documentation, FAQs, or reach out to our team directly, you’ll receive quick and reliable solutions. Our goal is to ensure your security and satisfaction!"}
         />
-
 
         <Footer />
 

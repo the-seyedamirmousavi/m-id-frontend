@@ -10,11 +10,13 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        background: "var(--background)",
+        background: "var(--background-color)",
         foreground: "var(--foreground)",
+        primary: '#0A192F',
+        'btn-primary': 'var(--primary-color)',
+        'btn-text': '#ffffff',
       },
     },
   },
   plugins: [],
 };
-

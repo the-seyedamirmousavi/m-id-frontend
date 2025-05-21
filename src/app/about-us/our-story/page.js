@@ -1,12 +1,11 @@
-'use client'; 
-
-// pages/about-us/vision-mission.js
-import styles from './OurStory.module.css';
 import Footer from '../../../components/Footer';
 import Head from "next/head";
 import TextParagraph from '../../../components/TextParagraph';
 import TextTitle from '../../../components/TextTitle';
 import ImageWithTitles from '../../../components/ImageWithTitles';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faInstagram, faLinkedin, faGithub } from '@fortawesome/free-brands-svg-icons';
+import Link from 'next/link';
 
 export default function VisionMission() {
 
@@ -17,18 +16,13 @@ export default function VisionMission() {
         <meta name="description" content="Welcome to M-ID - Technology for well-being" />
       </Head>
 
-      <div style={{ 
-        width: '100vw',
-        height: '100vh',
-        overflowY: 'auto',
-        alignItems: 'center',
-        justifyContent: 'flex-start',
-      }}>
+      <div>
 
         <TextTitle title={"We believe that small steps can create big changes"} />
+
         <TextParagraph 
         title={"Every story started from a need, but M-ID it was formed from a dream"} 
-        paragraph={"Eight years ago, the idea of creating an 'Iranian Microsoft' took shape in my mind. Over the years, this vision has grown and evolved, becoming a goal I have relentlessly pursued. Today, after years of hard work and dedication, I am proud to announce that the initial phases of this idea have come to life, and you can now experience some of its early offerings."} 
+        paragraph={"At 17 years old, the idea of creating an ( Iranian Microsoft ) took shape in my mind. Over time, this vision grew and evolved into a goal that I have continuously worked towards. Today, this idea has come to life, and you can now experience some of its first achievements."} 
        />
 
         <ImageWithTitles
@@ -59,7 +53,7 @@ export default function VisionMission() {
           } 
         />
 
-
+{/* 
 
         <ImageWithTitles  
         imageSrc="/images/me.jpg"
@@ -71,34 +65,21 @@ export default function VisionMission() {
         reverse={true}
 
         child={
-          <div>
-         
+          <div className='mt-10 flex'>
+                <Link href="https://github.com/the-seyedamirmousavi" className="text-dark me-3" target="_blank" rel="noopener noreferrer">
+                  <FontAwesomeIcon icon={faGithub} size="2x" />
+                </Link>
 
-        <a href="https://www.linkedin.com/in/seyed-amir-mousavi-a45345226?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" target="_blank" rel="noopener noreferrer">
-        <img 
-          src="/images/linkdin.png" 
-          alt="GitHub" 
-          width={32} 
-          height={32} 
-          className={styles.logo}
-        />
-        </a>
-
-
-        <a href="https://github.com/the-seyedamirmousavi" target="_blank" rel="noopener noreferrer">
-        <img 
-          src="/images/github.svg" 
-          alt="GitHub" 
-          width={32} 
-          height={32} 
-          className={styles.logo}
-        />
-      </a>
-       
-       
-          </div>
+                <Link href="https://instagram.com/mutec1381" className="text-dark me-3" target="_blank" rel="noopener noreferrer">
+                  <FontAwesomeIcon icon={faInstagram} size="2x" />
+                </Link>
+                <Link href="https://linkedin.com/in/seyed-amir-mousavi-a45345226" className="text-dark me-3" target="_blank" rel="noopener noreferrer">
+                  <FontAwesomeIcon icon={faLinkedin} size="2x" />
+                </Link>
+          </div> 
         }
         />
+
 
         <ImageWithTitles  
         imageSrc="/images/behzad.jpg"
@@ -109,36 +90,22 @@ export default function VisionMission() {
         }}
         reverse={false}
         child={
-          <div>
-         
-
-        <a href="https://www.linkedin.com/in/seyed-amir-mousavi-a45345226?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" target="_blank" rel="noopener noreferrer">
-        <img 
-          src="/images/linkdin.png" 
-          alt="GitHub" 
-          width={32} 
-          height={32} 
-          className={styles.logo}
-        />
-        </a>
-
-
-        <a href="https://github.com/the-seyedamirmousavi" target="_blank" rel="noopener noreferrer">
-        <img 
-          src="/images/github.svg" 
-          alt="GitHub" 
-          width={32} 
-          height={32} 
-          className={styles.logo}
-        />
-      </a>
+          
+            <div className='mt-10 flex'>
+               
+                <Link href="https://instagram.com/turing1950" className="text-dark me-3" target="_blank" rel="noopener noreferrer">
+                  <FontAwesomeIcon icon={faInstagram} size="2x" />
+                </Link>
+                <Link href="https://linkedin.com/in/turing1950" className="text-dark me-3" target="_blank" rel="noopener noreferrer">
+                  <FontAwesomeIcon icon={faLinkedin} size="2x" />
+                </Link>
        
-       
-          </div>
+          </div> 
+          
         }
         >
       
-        </ImageWithTitles>
+        </ImageWithTitles> */}
 
         <TextParagraph 
         title={"Why Should You Trust Us?"} 

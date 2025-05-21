@@ -34,7 +34,7 @@ export default function ReferralLinkPage() {
   // }, []);
 
   return (
-    <div className="container">
+    <div className="w-full">
       <h1>Your Referral Link</h1>
       <p>You can share the following link to invite others:</p>
       <div className="input-group">
@@ -44,8 +44,7 @@ export default function ReferralLinkPage() {
           className="form-control" 
           readOnly 
         />
-        <button 
-          className="btn btn-primary" 
+        <button className="bg-[#0A192F] text-white px-4 py-2 rounded-lg hover:bg-[#172A45] transition"
           onClick={() => navigator.clipboard.writeText(referralLink)}
         >
           Copy Link
@@ -58,7 +57,7 @@ export default function ReferralLinkPage() {
           {referrals.map((user, index) => (
             <li key={index} className="list-group-item d-flex justify-content-between align-items-center">
               {user.name} - {user.email} 
-              <span className="badge bg-success">${user.commission} USD</span>
+              <span className="badge bg-[#0A192F]">${user.commission} USD</span>
             </li>
           ))}
         </ul>

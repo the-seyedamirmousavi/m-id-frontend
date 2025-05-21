@@ -8,7 +8,6 @@ interface CircularProgressProps {
 }
 
 const CircularProgress: React.FC<CircularProgressProps> = ({ remainingRequests, totalRequests }) => {
-  const percentage = ((totalRequests - remainingRequests) / totalRequests) * 100;
 
   return (
     <div style={{ width: 120, height: 120 }}>
@@ -16,8 +15,8 @@ const CircularProgress: React.FC<CircularProgressProps> = ({ remainingRequests, 
         value={remainingRequests}
         text={`${remainingRequests}/${totalRequests}`}
         styles={buildStyles({
-          pathColor: `rgba(62, 152, 199, ${percentage / 100})`,
-          textColor: '#3e98c7',
+          pathColor: `var(--primary-color)`,
+          textColor: 'var(--primary-color)',
           trailColor: '#d6d6d6',
           backgroundColor: '#3e98c7',
         })}

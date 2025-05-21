@@ -99,8 +99,10 @@ const NewsPage = async ({ params }: { params: { slug: string } }) => {
   const metadata = JSON.parse(news.metadata);
 
   return (
-    <div className="mx-auto h-100" style={{ marginTop: '90px' }}>
-      <div className="card px-3 col-lg-8 mx-auto my-3">
+    <div className="mx-auto h-full flex flex-col" >
+      <div className="card px-3 col-lg-8 h-full mx-auto" style={{
+        marginTop : '80px'
+      }}>
         <div className="card-body">
           <h1 className="card-title" style={{ color: 'black' }}>{news.title}</h1>
           <p className="card-text"><strong>Category:</strong> {news.category}</p>

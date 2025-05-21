@@ -27,14 +27,15 @@ export default function ServiceSelectionPage() {
       }}
     >
       {/* Main Content */}
-      <div className="container" style={{ paddingTop: '100px', flex: 1 }}>
+      <div className="" style={{ marginTop: '100px', flex: 1 }}>
+        <div className='bg-white container p-10 rounded'>
         <h1 className="text-center mb-4">Service Selection</h1>
         
-        <div className="row">
+        <div className="row p-3">
           {services.map((service) => (
             <div key={service.months} className="col-md-3 mb-3">
               <button
-                className={`btn btn-outline-primary w-100 ${
+                className={`my-btn my-btn-outline-primary w-100 ${
                   selectedService?.months === service.months ? 'active' : ''
                 }`}
                 onClick={() => handleServiceSelect(service)}
@@ -53,6 +54,7 @@ export default function ServiceSelectionPage() {
             </Link>
           </div>
         )}
+        </div>
       </div>
 
       {/* Footer always stays at the bottom */}

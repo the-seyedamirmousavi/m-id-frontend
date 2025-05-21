@@ -43,7 +43,7 @@
   bottom: -1px; /* فاصله خط از متن */
   width: 100%;
   height: 2px;
-  background-color: #0070f3; /* رنگ خط */
+  background-color: var(--primary-color-active); /* رنگ خط */
   transform: scaleX(0);
   transform-origin: right;
   transition: transform 0.3s ease-out;

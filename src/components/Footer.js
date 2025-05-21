@@ -1,16 +1,8 @@
 import Head from 'next/head'; 
-import { faFacebook, faInstagram, faTwitter, faLinkedin, faYoutube, faTelegram, faWhatsapp, faGithub } from '@fortawesome/free-brands-svg-icons';
-import { faBars } from "@fortawesome/free-solid-svg-icons";
+import { faInstagram, faLinkedin, faYoutube, faTelegram, faGithub } from '@fortawesome/free-brands-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 const Footer = () => {
   return (
-    <>
-    <Head>
-      <link
-        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
-        rel="stylesheet"
-      />
-    </Head>
     <footer className="bg-white text-dark py-4">
       <div className="container py-2">
         <div className="row text-center text-md-start">
@@ -67,8 +59,6 @@ const Footer = () => {
         </div>
       </div>
     </footer>
-    </>
-
   );
 };
 

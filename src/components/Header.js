@@ -51,7 +51,7 @@ const Header = ({ menuItems }) => {
       )}
 
       {/* ********************************* Header ********************************* */}
-      <header className={`bg-light top-0 ${styles.metaHeader} ${isHidden ? styles.hidden : ""}`}>
+      <header className={`bg-white top-0 ${styles.metaHeader} ${isHidden ? styles.hidden : ""}`}>
         {/* ********************************* (برای لپ تاپ) ********************************* */}
         <div className={`${styles.header} ${styles.metaHeaderLarg}`}>
           
@@ -65,7 +65,7 @@ const Header = ({ menuItems }) => {
                 {menuItems.map((item) => (
                   <div
                     key={item.name}
-                    className={`${styles.iconButton} txt`}
+                    className={`${styles.iconButton} text-[var(--primary-color-active)] hover:text-[var(--primary-color-hover)]`}
                     onMouseEnter={() => handleMouseEnter(item.name)}
                   >
                     {item.name}
@@ -159,7 +159,7 @@ const Header = ({ menuItems }) => {
         >
           <div className="container pt-4">
             <div className="mt-5">
-              <ul className="nav flex-column bg-light">
+              <ul className="nav flex-column">
                 {menuItems.map((item,index) => (
 
                   <MenuItem key={index} title={item.name} >
@@ -225,7 +225,7 @@ const MenuItem = ({ title, children }) => {
     <div className="border-bottom">
       <button
         onClick={() => setIsOpen(!isOpen)}
-        className="w-100 text-start px-3 py-2 btn btn-light d-flex justify-content-between align-items-center"
+        className="w-100 text-start px-3 py-2 d-flex justify-content-between align-items-center"
       >
         <span>{title}</span>
         <FontAwesomeIcon icon={isOpen ? faChevronUp : faChevronDown} size="lg" />

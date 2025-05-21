@@ -73,7 +73,7 @@ export default function FullScreenSlider() {
         </div>
     </div>
     <div className='h-1/4  flex flex-col md:h-full md:w-3/4 md:my-0 md:items-center md:justify-center'>
-      <h1 className="text-[2.5rem] font-bold text-gray-800 leading-[1.4] mb-5 text-left">{slides[currentIndex]?.title}</h1>
+      <h1 className="font-bold text-gray-800 leading-[1.4] mb-5 text-left">{slides[currentIndex]?.title}</h1>
       <p className="text-lg text-gray-600">{slides[currentIndex]?.description}</p>
     </div>
   </div>

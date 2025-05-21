@@ -61,7 +61,7 @@ export default function AuthCallback() {
         <title>Authentication Callback</title>
         <meta name="description" content="OAuth2 authentication callback page" />
       </Head>
-        <div className="d-flex justify-content-center align-items-center w-100">
+        <div className="d-flex justify-content-center align-items-center w-full h-screen">
           <div className="card shadow-lg p-4 text-center bg-light ">
             {loading ? (
               <>

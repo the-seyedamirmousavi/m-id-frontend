@@ -11,31 +11,7 @@ const TrainingResources = () => {
   ];
 
   return (
-    <div className="training-resources" style={{ padding: "20px", margin: "auto" }}>      
-     {/* <section>
-        <h3>Video Tutorials</h3>
-        <div style={{ display: "flex", gap: "20px", flexWrap: "wrap" }}>
-          <iframe
-            width="300"
-            height="200"
-            src="https://www.youtube.com/embed/dQw4w9WgXcQ"
-            title="Training Video 1"
-            frameBorder="0"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-            allowFullScreen
-          ></iframe>
-          <iframe
-            width="300"
-            height="200"
-            src="https://www.youtube.com/embed/3JZ_D3ELwOQ"
-            title="Training Video 2"
-            frameBorder="0"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-            allowFullScreen
-          ></iframe>
-        </div>
-      </section> */}
-
+    <div className="w-full">
       <section>
         <h3>Guides & Documents</h3>
         <ul style={{ listStyle: "none", padding: 0 }}>

@@ -33,14 +33,14 @@ const UserRequests = () => {
         justifyContent: 'space-between'
     }}>
       {/* Content section */}
-      <div style={{
+      <div className='container' style={{
         flex: 1,
         display: 'flex',
         flexDirection: 'column',
         justifyContent: 'center',
         alignItems: 'center',
         textAlign: 'center',
-        padding: '20px'
+        marginTop: '80px'
       }}>
         <h2 className="mb-4">User Requests</h2>
         <p className="mb-5">If you have any requests or issues, please fill out the form below.</p>
@@ -84,7 +84,7 @@ const UserRequests = () => {
                   />
                 </div>
 
-                <button type="submit" className="btn btn-primary w-100">Submit Request</button>
+                <button type="submit" className="my-btn my-btn-primary w-100">Submit Request</button>
               </form>
             )}
           </div>
