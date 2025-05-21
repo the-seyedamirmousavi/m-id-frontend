@@ -24,7 +24,7 @@ export default function AuthCallback() {
           body.append('code', code);
           body.append('redirect_uri', 'https://m-id.ir/auth/callback/code');
 
-          const response = await fetch('https:/auth./m-id.ir/oauth2/token', {
+          const response = await fetch('https://auth.m-id.ir/oauth2/token', {
             method: 'POST',
             headers: {
               'Content-Type': 'application/x-www-form-urlencoded',
