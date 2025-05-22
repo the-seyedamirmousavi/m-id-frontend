@@ -40,7 +40,7 @@ const MonitoringComponent: React.FC = () => {
       return;
     }
 
-    const response2 = await fetch("http://localhost:9000/api/clients/", {
+    const response2 = await fetch("https://m-id.ir/api/clients/", {
       method: "GET",
       headers: {
         "Content-Type": "application/json",

@@ -102,20 +102,20 @@ const Header = ({ menuItems }) => {
 
           <div className={styles.headerRight}>
             
-          {!showMobileMenu && isAuthenticated && !loading && (
+          {/* {!showMobileMenu && isAuthenticated && !loading && false (
             <SubMenuButton
               name="Representation panel"
               closeMenu={{}}
               onClick={{}}
               url="/representation-panel"
-            />            )}
+            />            )} */}
 
             {!showMobileMenu && !isAuthenticated && !loading && (
               <SubMenuButton
                 name="Login"
                 closeMenu={{}}
                 onClick={{}}
-                url="http://localhost:9000/oauth2/authorize?response_type=code&client_id=oidc-web-m-id&scope=profile&redirect_uri=http://localhost:3000/auth/callback/code&state=someState"
+                url="https://auth.m-id.ir/oauth2/authorize?response_type=code&client_id=oidc-web-m-id&scope=profile&redirect_uri=https://m-id.ir/auth/callback/code&state=someState"
               />
             )}
           </div>
@@ -179,7 +179,7 @@ const Header = ({ menuItems }) => {
                 ))}
 
 
-                {isAuthenticated && !loading && (
+                 {isAuthenticated && !loading && false (
                   <Link 
                     className="w-100 px-3 text-start py-2 btn btn-light"
                     href="/representation-panel"
@@ -190,7 +190,7 @@ const Header = ({ menuItems }) => {
                   >
                     Access Representation Panel
                   </Link>
-                )}
+                )} 
 
                 {!isAuthenticated && !loading && (
                   <Link
@@ -199,7 +199,7 @@ const Header = ({ menuItems }) => {
                       setShowMobileMenu(false);
                       handleMouseLeave();
                     }}
-                    href="https://auth.m-id.ir/oauth2/authorize?response_type=code&client_id=oidc-web-m-id&scope=profile&redirect_uri=http://localhost:3000/auth/callback/code&state=someState"
+                    href="https://auth.m-id.ir/oauth2/authorize?response_type=code&client_id=oidc-web-m-id&scope=profile&redirect_uri=https://m-id.ir/auth/callback/code&state=someState"
                   >
                     Sign in to Your Account
                   </Link>

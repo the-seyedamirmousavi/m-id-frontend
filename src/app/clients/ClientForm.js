@@ -40,7 +40,7 @@ const ClientForm = () => {
     }
 
     try {
-      const response = await fetch("http://localhost:9000/api/clients/", {
+      const response = await fetch("https://m-id.ir/api/clients/", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
