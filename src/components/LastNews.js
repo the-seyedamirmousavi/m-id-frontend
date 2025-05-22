@@ -5,34 +5,34 @@ const LastNews = () => {
   const news = [
     {
       id: 1,
-      title: "Breaking News: New Technology Innovations in 2024",
-      description: "In 2024, technology is advancing at an unprecedented rate...",
-      link: "/news/2024-tech-innovations",
-      date: "December 25, 2024",
+      title: "Just Released: Introducing New FitSho Technologies",
+      description: "Our team has recently introduced innovative technologies for the FitSho app, revolutionizing user experience.",
+      link: "/news/fitscho-new-tech",
+      date: "May 20, 2025",
       image: "/images/FitSho.png",
     },
     {
       id: 2,
-      title: "Global Market Trends: What to Expect in 2025",
-      description: "Experts predict a shift in global market trends by 2025...",
-      link: "/news/2025-market-trends",
-      date: "December 24, 2024",
+      title: "New Server Purchased to Boost FitSho Performance",
+      description: "A new powerful server has been acquired to enhance service quality and provide better response times for users.",
+      link: "/news/fitscho-new-server",
+      date: "May 15, 2025",
       image: "/images/FitSho.png",
     },
     {
       id: 3,
-      title: "Climate Change: Global Efforts and Challenges",
-      description: "Climate change is one of the most pressing issues of our time...",
-      link: "/news/climate-change-efforts",
-      date: "December 20, 2024",
+      title: "Successful Completion of FitSho Project Phases One and Two",
+      description: "The first two phases of the FitSho project have been successfully completed, and the team is preparing for the next stages.",
+      link: "/news/fitscho-phase1-2-success",
+      date: "May 10, 2025",
       image: "/images/FitSho.png",
     },
     {
       id: 4,
-      title: "New Space Discoveries in 2025",
-      description: "Scientists are making groundbreaking discoveries in space...",
-      link: "/news/2025-space-discoveries",
-      date: "December 18, 2024",
+      title: "Preparation Underway for FitSho Project Phase Three",
+      description: "Phase three of the FitSho project is currently being prepared and will soon be launched with new and improved features.",
+      link: "/news/fitscho-phase3-preparation",
+      date: "May 18, 2025",
       image: "/images/FitSho.png",
     },
   ];
@@ -48,7 +48,7 @@ const LastNews = () => {
               key={item.id}
               className="w-[240px] sm:w-[280px] bg-white rounded-xl shadow-md overflow-hidden flex flex-col flex-shrink-0 transform duration-300 transition-transform hover:scale-105"
             >
-              <a href={item.link} className="block no-underline hover:no-underline">
+              <a className="block no-underline hover:no-underline">
                 <div className="w-full h-40 overflow-hidden flex justify-center rounded-t-xl">
                   <img
                     src={item.image}

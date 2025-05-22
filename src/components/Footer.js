@@ -18,7 +18,7 @@ const Footer = () => {
           <div className="col-md-4 col-12 mb-3">
             <h5 className="fw-bold text-dark py-1">Quick Links</h5>
             <ul className="list-unstyled">
-              <li><a href="https://m-id.ir/oauth2/authorize?response_type=code&client_id=oidc-web-m-id&scope=profile&redirect_uri=https://m-id.ir/auth/callback/code&state=someState" className="text-dark text-decoration-none">Join Us</a></li>
+              <li><a href="https://auth.m-id.ir/oauth2/authorize?response_type=code&client_id=oidc-web-m-id&scope=profile&redirect_uri=https://m-id.ir/auth/callback/code&state=someState" className="text-dark text-decoration-none">Join Us</a></li>
               <li><a href="/" className="text-dark text-decoration-none">Welcome Home</a></li>
               <li><a href="/about-us/our-story" className="text-dark text-decoration-none">The Story of M-ID</a></li>
             </ul>

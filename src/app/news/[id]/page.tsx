@@ -1,5 +1,4 @@
-// app/news/[slug]/page.tsx
-import { Suspense } from "react";
+// app/news/[id]/page.tsx
 import Footer from "../../../components/Footer";
 
 interface NewsData {
@@ -11,8 +10,8 @@ interface NewsData {
   metadata: string;
 }
 
-const fetchNewsData = async (slug: string): Promise<NewsData> => {
-
+/*
+const fetchNewsData = async (id: string): Promise<NewsData> => {
   const fakeNews = {
     title: "Breaking: New AI Model Set to Revolutionize Healthcare",
     category: "Technology",
@@ -76,7 +75,6 @@ const fetchNewsData = async (slug: string): Promise<NewsData> => {
           content: "As AI continues to evolve, it is expected that healthcare professionals will work alongside intelligent systems to make more accurate diagnoses and improve patient care. This collaboration between human expertise and AI technology could be the future of medicine."
         }
       ]
-      
     }),
     metadata: JSON.stringify({
       views: 1254,
@@ -86,38 +84,60 @@ const fetchNewsData = async (slug: string): Promise<NewsData> => {
       publicationDate: "2025-02-03T10:00:00Z"
     })
   };
-  
-  
+
   return fakeNews;
 };
+*/
 
-const NewsPage = async ({ params }: { params: { slug: string } }) => {
-  const { slug } = params;
-  const news = await fetchNewsData(slug);
+type Params = {
+  id: string;
+};
+
+type Props = {
+  params: Params;
+};
+
+/*
+const NewsPage = async ({ params }: Props) => {
+  const { id } = params;
+  const news = await fetchNewsData(id);
 
   const content = JSON.parse(news.content);
   const metadata = JSON.parse(news.metadata);
 
   return (
-    <div className="mx-auto h-full flex flex-col" >
-      <div className="card px-3 col-lg-8 h-full mx-auto" style={{
-        marginTop : '80px'
-      }}>
+    <div className="mx-auto h-full flex flex-col">
+      <div
+        className="card px-3 col-lg-8 h-full mx-auto"
+        style={{ marginTop: "80px" }}
+      >
         <div className="card-body">
-          <h1 className="card-title" style={{ color: 'black' }}>{news.title}</h1>
-          <p className="card-text"><strong>Category:</strong> {news.category}</p>
-          <p className="card-text"><strong>Author:</strong> {news.author}</p>
+          <h1 className="card-title" style={{ color: "black" }}>
+            {news.title}
+          </h1>
           <p className="card-text">
-            <strong>Published At:</strong> {new Date(news.publishedAt).toLocaleString()}
+            <strong>Category:</strong> {news.category}
+          </p>
+          <p className="card-text">
+            <strong>Author:</strong> {news.author}
+          </p>
+          <p className="card-text">
+            <strong>Published At:</strong>{" "}
+            {new Date(news.publishedAt).toLocaleString()}
           </p>
           <hr />
-  
-          {/* Content Blocks */}
+
           <div>
-            {content.blocks.map((block, index) => (
+            {content.blocks.map((block: any, index: number) => (
               <div key={index} className="my-3">
-                {block.type === "text" && <p className="txt fs-5 py-1">{block.content}</p>}
-                {block.type === "title" && <h3 className="txt pt-3"><strong>{block.content}</strong></h3>}
+                {block.type === "text" && (
+                  <p className="txt fs-5 py-1">{block.content}</p>
+                )}
+                {block.type === "title" && (
+                  <h3 className="txt pt-3">
+                    <strong>{block.content}</strong>
+                  </h3>
+                )}
                 {block.type === "image" && (
                   <img
                     src={block.content}
@@ -131,6 +151,15 @@ const NewsPage = async ({ params }: { params: { slug: string } }) => {
         </div>
       </div>
       <Footer />
+    </div>
+  );
+};
+*/
+
+const NewsPage = () => {
+  return (
+    <div className="mx-auto h-full flex flex-col justify-center items-center" style={{ marginTop: "80px" }}>
+      <h2>این صفحه فعلاً غیرفعال است.</h2>
     </div>
   );
 };
