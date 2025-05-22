@@ -36,7 +36,7 @@ export const AuthProvider = ({ children }: { children: ReactNode }) => {
           return;
         }
 
-        const response = await fetch('http://localhost:9000/api/clients/isActive', {
+        const response = await fetch('https://auth.m-id.ir/api/clients/isActive', {
           method: 'GET',
           headers: {
             'Authorization': `Bearer ${token}`,
@@ -85,7 +85,7 @@ export const AuthProvider = ({ children }: { children: ReactNode }) => {
   // درخواست رفرش توکن
   const refreshToken = async (): Promise<string> => {
     try {
-      const response = await fetch('http://localhost:9000/api/auth/refresh', {
+      const response = await fetch('https://auth.m-id.ir/api/auth/refresh', {
         method: 'POST',
         credentials: 'include',
         headers: { 'Content-Type': 'application/json' },
